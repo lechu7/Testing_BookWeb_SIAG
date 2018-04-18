@@ -1,0 +1,7 @@
+D:\GitHub\Testing_BookWeb_SIAG\Testy\Testy\bin\Debug\Testy.exe.config
+D:\GitHub\Testing_BookWeb_SIAG\Testy\bin\Debug\Testy.exe.config
+D:\GitHub\Testing_BookWeb_SIAG\Testy\bin\Debug\Testy.exe
+D:\GitHub\Testing_BookWeb_SIAG\Testy\bin\Debug\Testy.pdb
+D:\GitHub\Testing_BookWeb_SIAG\Testy\obj\Debug\Testy.csprojResolveAssemblyReference.cache
+D:\GitHub\Testing_BookWeb_SIAG\Testy\obj\Debug\Testy.exe
+D:\GitHub\Testing_BookWeb_SIAG\Testy\obj\Debug\Testy.pdb
