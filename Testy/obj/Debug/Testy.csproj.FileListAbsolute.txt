@@ -5,3 +5,5 @@ D:\GitHub\Testing_BookWeb_SIAG\Testy\bin\Debug\Testy.pdb
 D:\GitHub\Testing_BookWeb_SIAG\Testy\obj\Debug\Testy.csprojResolveAssemblyReference.cache
 D:\GitHub\Testing_BookWeb_SIAG\Testy\obj\Debug\Testy.exe
 D:\GitHub\Testing_BookWeb_SIAG\Testy\obj\Debug\Testy.pdb
+D:\GitHub\Testing_BookWeb_SIAG\Testy\bin\Debug\WebDriver.dll
+D:\GitHub\Testing_BookWeb_SIAG\Testy\bin\Debug\WebDriver.xml
