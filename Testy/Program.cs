@@ -13,8 +13,13 @@ namespace Testy
 
         static void Main(string[] args)
         {
-            FirefoxDriverService service = FirefoxDriverService.CreateDefaultService(@"d:\tmp");
+
+            FirefoxDriverService service = FirefoxDriverService.CreateDefaultService(@"..\..\..\FirefoxDriver");//TEGO NIE ZMIENIAĆ 
+            
+            //TU TRZEBA WPISAĆ ODPOWIEDNIĄ ŚCIEŻKĘ DO MOZILLA FIREFOX
             service.FirefoxBinaryPath= @"C:\Programy\Mozilla Firefox\firefox.exe";
+            // service.FirefoxBinaryPath= @"C:\Program Files (x86)\Mozilla Firefox\";//ŚCIEŻKA DEFAULT-OWA
+
             IWebDriver driver = new FirefoxDriver(service);
             driver.Navigate().GoToUrl("http://www.google.pl");
 
