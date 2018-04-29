@@ -1,0 +1,11 @@
+D:\GitHub\Testing_BookWeb_SIAG\Login\bin\Debug\Login.dll
+D:\GitHub\Testing_BookWeb_SIAG\Login\bin\Debug\Login.pdb
+D:\GitHub\Testing_BookWeb_SIAG\Login\bin\Debug\nunit.framework.dll
+D:\GitHub\Testing_BookWeb_SIAG\Login\bin\Debug\WebDriver.dll
+D:\GitHub\Testing_BookWeb_SIAG\Login\bin\Debug\nunit.framework.xml
+D:\GitHub\Testing_BookWeb_SIAG\Login\bin\Debug\WebDriver.xml
+D:\GitHub\Testing_BookWeb_SIAG\Login\obj\Debug\Login.csproj.CoreCompileInputs.cache
+D:\GitHub\Testing_BookWeb_SIAG\Login\obj\Debug\Login.csproj.CopyComplete
+D:\GitHub\Testing_BookWeb_SIAG\Login\obj\Debug\Login.dll
+D:\GitHub\Testing_BookWeb_SIAG\Login\obj\Debug\Login.pdb
+D:\GitHub\Testing_BookWeb_SIAG\Login\obj\Debug\Login.csprojResolveAssemblyReference.cache
