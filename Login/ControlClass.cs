@@ -16,6 +16,7 @@ namespace Login
         public static IWebDriver driver;
         FirefoxDriverService service;
 
+
         Menu_before_login mbl = new Menu_before_login();
 
 
@@ -32,7 +33,7 @@ namespace Login
          service.FirefoxBinaryPath = @"C:\Program Files\Mozilla Firefox\firefox.exe";
          driver = new FirefoxDriver(service);
          driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);//PRĘDKOŚć SKRYPTU
-         driver.Navigate().GoToUrl("http://cryptic-oasis-70750.herokuapp.com/login");
+         driver.Navigate().GoToUrl("http://cryptic-oasis-70750.herokuapp.com");
        
         }
 

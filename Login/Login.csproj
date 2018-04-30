@@ -44,7 +44,7 @@
   <ItemGroup>
     <Compile Include="Menu_before_login.cs" />
     <Compile Include="REPO.cs" />
-    <Compile Include="TestClass.cs" />
+    <Compile Include="ControlClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
