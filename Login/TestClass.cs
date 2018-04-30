@@ -6,9 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
-
-
-
+using System.Threading;
 
 namespace Login
 {
@@ -33,17 +31,75 @@ namespace Login
          service = FirefoxDriverService.CreateDefaultService();
          service.FirefoxBinaryPath = @"C:\Program Files\Mozilla Firefox\firefox.exe";
          driver = new FirefoxDriver(service);
+         driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);//PRĘDKOŚć SKRYPTU
          driver.Navigate().GoToUrl("http://cryptic-oasis-70750.herokuapp.com/login");
+       
         }
+
+        //KROK 1 "Wpisanie  "nie maila" w pole maila."
         [Test]
-        public void Login()
+        public void Login1()
         {
-            //KROK 1 "Wpisanie  "nie maila" w pole maila."
-            mbl.ClickLoginTab(driver, REPO.TB_mail);
-            mbl.EnterMail(driver,"random", REPO.ET_mail);
-            mbl.EnterPassword(driver, passAdmin, REPO.ET_password);
-            Assert.Pass("Działa");
-            
+            mbl.ClickLoginTab(driver, REPO.TB_UpMain_login);
+            Thread.Sleep(1500);
+            mbl.EnterMail(driver,"random", REPO.ET_login_mail);
+            mbl.CheckMail(driver, "random", REPO.ET_login_mail);
+            mbl.EnterPassword(driver, passAdmin, REPO.ET_login_password);
+            mbl.ClickLogIn(driver, REPO.BT_login_logIn);
+            mbl.CheckShowError(driver, REPO.PUWin_login_incorrectLoginDetails);
+        }
+
+        //KROK 2 "Wpisanie samego maila."
+        [Test]
+        public void Login2()
+        {
+            mbl.ClickLoginTab(driver, REPO.TB_UpMain_login);
+            Thread.Sleep(1500);
+            mbl.EnterMail(driver, mailAdmin, REPO.ET_login_mail);
+            mbl.CheckMail(driver, mailAdmin, REPO.ET_login_mail);
+            mbl.ClickLogIn(driver, REPO.BT_login_logIn);
+            mbl.CheckShowError(driver, REPO.PUWin_login_incorrectLoginDetails);
+        }
+
+        //KROK 3 "Wpisanie złego maila i złego hasła."
+        [Test]
+        public void Login3()
+        {
+            mbl.ClickLoginTab(driver, REPO.TB_UpMain_login);
+            Thread.Sleep(1500);
+            mbl.EnterMail(driver, "random", REPO.ET_login_mail);
+            mbl.EnterPassword(driver, "random", REPO.ET_login_password);
+            mbl.ClickLogIn(driver, REPO.BT_login_logIn);
+            mbl.CheckShowError(driver, REPO.PUWin_login_incorrectLoginDetails);
+        }
+        //KROK 4 "Poprawne logowanie na ADMINA."
+        [Test]
+        public void Login4()
+        {
+            mbl.ClickLoginTab(driver, REPO.TB_UpMain_login);
+            Thread.Sleep(1500);
+            mbl.EnterMail(driver, mailAdmin, REPO.ET_login_mail);
+            mbl.CheckMail(driver, mailAdmin, REPO.ET_login_mail);
+            mbl.EnterPassword(driver, passAdmin, REPO.ET_login_password);
+            mbl.ClickLogIn(driver, REPO.BT_login_logIn);
+            Thread.Sleep(500);
+            mbl.CheckLogin(driver, REPO.PUWin_home_correctLogin);
+            mbl.CheckLoginAsAdmin(driver, REPO.TB_UpMain_addBook);
+          
+        }
+        //KROK 5 "Poprawne logowanie na USER."
+        [Test]
+        public void Login5()
+        {
+            mbl.ClickLoginTab(driver, REPO.TB_UpMain_login);
+            Thread.Sleep(1500);
+            mbl.EnterMail(driver, mailUser, REPO.ET_login_mail);
+            mbl.CheckMail(driver, mailUser, REPO.ET_login_mail);
+            mbl.EnterPassword(driver, passUser, REPO.ET_login_password);
+            mbl.ClickLogIn(driver, REPO.BT_login_logIn);
+            Thread.Sleep(500);
+            mbl.CheckLogin(driver, REPO.PUWin_home_correctLogin);
+            mbl.CheckLoginAsUser(driver, REPO.TB_UpMain_addBook);
         }
         [TearDown]
         public void TearDown()
