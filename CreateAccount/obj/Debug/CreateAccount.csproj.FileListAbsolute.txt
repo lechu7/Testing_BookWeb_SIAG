@@ -1,0 +1,9 @@
+D:\GitHub\Testing_BookWeb_SIAG\CreateAccount\bin\Debug\CreateAccount.dll
+D:\GitHub\Testing_BookWeb_SIAG\CreateAccount\bin\Debug\CreateAccount.pdb
+D:\GitHub\Testing_BookWeb_SIAG\CreateAccount\bin\Debug\nunit.framework.dll
+D:\GitHub\Testing_BookWeb_SIAG\CreateAccount\bin\Debug\nunit.framework.xml
+D:\GitHub\Testing_BookWeb_SIAG\CreateAccount\obj\Debug\CreateAccount.csprojResolveAssemblyReference.cache
+D:\GitHub\Testing_BookWeb_SIAG\CreateAccount\obj\Debug\CreateAccount.csproj.CoreCompileInputs.cache
+D:\GitHub\Testing_BookWeb_SIAG\CreateAccount\obj\Debug\CreateAccount.csproj.CopyComplete
+D:\GitHub\Testing_BookWeb_SIAG\CreateAccount\obj\Debug\CreateAccount.dll
+D:\GitHub\Testing_BookWeb_SIAG\CreateAccount\obj\Debug\CreateAccount.pdb

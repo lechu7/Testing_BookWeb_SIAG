@@ -11,7 +11,7 @@ using System.Threading;
 namespace Login
 {
     [TestFixture]
-    public class ControlClass
+    public class TestClass
     {
         public static IWebDriver driver;
         FirefoxDriverService service;
@@ -73,6 +73,7 @@ namespace Login
             mbl.ClickLogIn(driver, REPO.BT_login_logIn);
             mbl.CheckShowError(driver, REPO.PUWin_login_incorrectLoginDetails);
         }
+
         //KROK 4 "Poprawne logowanie na ADMINA."
         [Test]
         public void Login4()
@@ -86,7 +87,6 @@ namespace Login
             Thread.Sleep(500);
             mbl.CheckLogin(driver, REPO.PUWin_home_correctLogin);
             mbl.CheckLoginAsAdmin(driver, REPO.TB_UpMain_addBook);
-          
         }
         //KROK 5 "Poprawne logowanie na USER."
         [Test]
