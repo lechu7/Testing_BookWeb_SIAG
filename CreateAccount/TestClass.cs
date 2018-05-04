@@ -1,11 +1,10 @@
 ﻿using NUnit.Framework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
+using System.Threading;
+using RepoClass;
+
 
 namespace Registration
 {
@@ -14,7 +13,7 @@ namespace Registration
     {
         public static IWebDriver driver;
         FirefoxDriverService service;
-
+        MenuRegister mr = new MenuRegister();
 
 
         [SetUp]
@@ -27,11 +26,16 @@ namespace Registration
             driver.Navigate().GoToUrl("http://cryptic-oasis-70750.herokuapp.com");
         }
 
+        //KROK 1 "Rejestracja z pustymi polami"
         [Test]
         public void Registration1()
         {
-          
+            mr.ClickRegistrationTab(driver, REPO.TB_UpMain_register);
+            Thread.Sleep(1500);
+            mr.ClickRegistrationButton(driver, REPO.BT_register_register);
+            //ToDo Czy wyskakuje error
         }
+
 
         [TearDown]
         public void TearDown()

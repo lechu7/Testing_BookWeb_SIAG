@@ -1,0 +1,14 @@
+D:\GitHub\Testing_BookWeb_SIAG\CreateAccount\bin\Debug\nunit.framework.dll
+D:\GitHub\Testing_BookWeb_SIAG\CreateAccount\bin\Debug\WebDriver.dll
+D:\GitHub\Testing_BookWeb_SIAG\CreateAccount\bin\Debug\nunit.framework.xml
+D:\GitHub\Testing_BookWeb_SIAG\CreateAccount\bin\Debug\WebDriver.xml
+D:\GitHub\Testing_BookWeb_SIAG\CreateAccount\obj\Debug\Registration.csproj.CoreCompileInputs.cache
+D:\GitHub\Testing_BookWeb_SIAG\CreateAccount\obj\Debug\Registration.csproj.CopyComplete
+D:\GitHub\Testing_BookWeb_SIAG\CreateAccount\bin\Debug\Registration.dll
+D:\GitHub\Testing_BookWeb_SIAG\CreateAccount\bin\Debug\Registration.pdb
+D:\GitHub\Testing_BookWeb_SIAG\CreateAccount\bin\Debug\RepoClass.dll
+D:\GitHub\Testing_BookWeb_SIAG\CreateAccount\bin\Debug\RepoClass.pdb
+D:\GitHub\Testing_BookWeb_SIAG\CreateAccount\bin\Debug\nunit.framework.pdb
+D:\GitHub\Testing_BookWeb_SIAG\CreateAccount\obj\Debug\Registration.csprojResolveAssemblyReference.cache
+D:\GitHub\Testing_BookWeb_SIAG\CreateAccount\obj\Debug\Registration.dll
+D:\GitHub\Testing_BookWeb_SIAG\CreateAccount\obj\Debug\Registration.pdb
