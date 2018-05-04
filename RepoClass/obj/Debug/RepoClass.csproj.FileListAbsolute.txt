@@ -1,9 +1,0 @@
-D:\GitHub\Testing_BookWeb_SIAG\RepoClass\bin\Debug\RepoClass.dll
-D:\GitHub\Testing_BookWeb_SIAG\RepoClass\bin\Debug\RepoClass.pdb
-D:\GitHub\Testing_BookWeb_SIAG\RepoClass\bin\Debug\WebDriver.dll
-D:\GitHub\Testing_BookWeb_SIAG\RepoClass\bin\Debug\WebDriver.xml
-D:\GitHub\Testing_BookWeb_SIAG\RepoClass\obj\Debug\RepoClass.csprojResolveAssemblyReference.cache
-D:\GitHub\Testing_BookWeb_SIAG\RepoClass\obj\Debug\RepoClass.csproj.CoreCompileInputs.cache
-D:\GitHub\Testing_BookWeb_SIAG\RepoClass\obj\Debug\RepoClass.csproj.CopyComplete
-D:\GitHub\Testing_BookWeb_SIAG\RepoClass\obj\Debug\RepoClass.dll
-D:\GitHub\Testing_BookWeb_SIAG\RepoClass\obj\Debug\RepoClass.pdb
