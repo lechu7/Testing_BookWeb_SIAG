@@ -36,5 +36,19 @@ namespace RepoClass
 
         //Strona główna po zalogowaniu
         public static By PUWin_home_correctLogin = By.XPath("//div[contains(.,'Zostałeś prawidłowo zalogowany')]");
+
+        //lista książek
+        public static By TB_search = By.Id("search");
+        public static By SE_orders = By.Id("orders");
+        public static By SE_sort = By.Id("sort");
+        public static By AH_book_Autobiografia = By.CssSelector("[href*='/books/1']");
+
+        //strona książki autobiografia
+        public static By TA_description = By.Id("description");
+        public static By SE_opinion_rate = By.Id("opinion_rate");
+        public static By BT_submit = By.Id("submit");
+        public static By DIV_opinion_test = By.XPath("//div[contains(.,'test') and contains(.,'1/10') and contains(.,'nie polecam')]");
+        public static By BT_return = By.CssSelector("[href*='https://siag-bookweb.herokuapp.com/books']");
+
     }
 }

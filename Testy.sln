@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Registration", "CreateAccou
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepoClass", "RepoClass\RepoClass.csproj", "{1110AF91-27AB-460B-8652-105C9E34461C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opinions", "Opinions\Opinions.csproj", "{AF6A034B-3999-47FF-BC45-39C05B5D1FB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{1110AF91-27AB-460B-8652-105C9E34461C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1110AF91-27AB-460B-8652-105C9E34461C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1110AF91-27AB-460B-8652-105C9E34461C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF6A034B-3999-47FF-BC45-39C05B5D1FB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF6A034B-3999-47FF-BC45-39C05B5D1FB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF6A034B-3999-47FF-BC45-39C05B5D1FB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF6A034B-3999-47FF-BC45-39C05B5D1FB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
