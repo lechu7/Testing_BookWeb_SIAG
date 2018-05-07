@@ -5,9 +5,32 @@ namespace RepoClass
 {
     public static class REPO
     {
-        //GŁóWny ADRES NASZEGO PROJEKTU
+        
+        //GŁóWNY ADRES NASZEGO PROJEKTU
         public static string side = "https://siag-bookweb.herokuapp.com/";
 
+        //ZMIENNE GLOBALNE
+        public static string mailAdmin = "admin@example.com";
+        public static string loginAdmin = "admin";
+        public static string passAdmin = "Admos384";
+
+        public static string mailUser = "dariuszjaros@email.com";
+        public static string loginUser = "djaros";
+        public static string passUser = "Jaros95";
+        public static string passUserToRegistration = "Jaroszewski95";
+
+        public static string mailUserTest = "totalnie.testowy.test@gmail.com";
+        public static string loginUserTest = "test";
+        public static string passUserTest = "EQ0GI3A0a";
+
+        public static string RegistartionTestUserName = "TestowyUserToDelete";
+        public static string RegistartionTestUserEmail = "TestowyUserToDelete@testowy.com";
+        public static string RegistartionTestUserPass = "Pa$$w0rd";
+
+
+
+
+        //OBIEKTY
         //NA KAŻDEJ ZAKŁADCE
         public static By HL_all_github = By.XPath("//a[contains(.,'github')]");
         public static By HL_all_home = By.XPath("//a[contains(.,'Powrót do strony głównej')]");
@@ -20,6 +43,7 @@ namespace RepoClass
         public static By TB_UpMain_books = By.Id("books");
         public static By TB_UpMain_users = By.Id("users");
         public static By TB_UpMain_addBook = By.Id("addbook");
+        public static By TB_UpMain_logOut = By.Id("logout");
 
         //Strona Rejestracji
         public static By ET_register_username = By.Id("username");
@@ -27,6 +51,13 @@ namespace RepoClass
         public static By ET_register_password = By.Id("password");
         public static By BT_register_register= By.Id("submit");
         public static By LB_register_registerIn = By.XPath("//div[contains(.,'Zarejestruj się w BookWeb!')]");
+        public static By PUWin_register_6errors_emptyInputs = By.XPath("//div[contains(.,'6 errors')]");
+        public static By PUWin_register_5errors_UserNameTo3 = By.XPath("//div[contains(.,'5 errors')]");
+        public static By PUWin_register_4errors_OnlyUserName = By.XPath("//div[contains(.,'4 errors')]");
+        public static By PUWin_register_2errors_ExistUserNameAndExistEmail = By.XPath("//div[contains(.,'2 errors')]");
+        public static By PUWin_register_1error = By.XPath("//div[contains(.,'1 error')]");
+        public static By PUWin_register_registerTestowyUserToDelete= By.XPath("//div[contains(.,'Witamy TestowyUserToDelete!')]");
+
 
         //Strona logowania
         public static By ET_login_mail = By.Id("email");
@@ -40,13 +71,17 @@ namespace RepoClass
         //Strona główna po zalogowaniu
         public static By PUWin_home_correctLogin = By.XPath("//div[contains(.,'Zostałeś prawidłowo zalogowany')]");
 
-        //lista książek
+        //Lista książek
         public static By TB_search = By.Id("search");
         public static By SE_orders = By.Id("orders");
         public static By SE_sort = By.Id("sort");
         public static By AH_book_Autobiografia = By.CssSelector("[href*='/books/1']");
 
-        //strona książki autobiografia
+        //Użytkownicy
+        public static By SE_users_pagination = By.XPath("//ul[@class='pagination']");
+     
+
+        //Strona książki autobiografia
         public static By TA_description = By.Id("description");
         public static By SE_opinion_rate = By.Id("opinion_rate");
         public static By BT_submit = By.Id("submit");

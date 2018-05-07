@@ -13,22 +13,9 @@ namespace Opinions
         public static IWebDriver driver;
         FirefoxDriverService service;
 
-
         Login.Menu_before_login mbl = new Login.Menu_before_login();
         Books_list bl = new Books_list();
         Books_page bp = new Books_page();
-
-        string mailAdmin = "admin@example.com";
-        string loginAdmin = "admin";
-        string passAdmin = "admos384";
-
-        string mailUser = "totalnie.testowy.test@gmail.com";
-        string loginUser = "test";
-        string passUser = "EQ0GI3A0a";
-
-
-
-
 
         [SetUp]
         public void SetUp()
@@ -46,9 +33,8 @@ namespace Opinions
             //logowanie
             mbl.ClickLoginTab(driver, REPO.TB_UpMain_login);
             Thread.Sleep(1500);
-            mbl.EnterMail(driver, loginUser, REPO.ET_login_mail);
-            
-            mbl.EnterPassword(driver, passUser, REPO.ET_login_password);
+            mbl.EnterMail(driver, REPO.loginUserTest, REPO.ET_login_mail);
+            mbl.EnterPassword(driver,REPO.passUserTest, REPO.ET_login_password);
             mbl.ClickLogIn(driver, REPO.BT_login_logIn);
             Thread.Sleep(500);
 
@@ -64,10 +50,8 @@ namespace Opinions
             bp.Submit_opinion(driver, REPO.BT_submit);
 
             //sprawdzenie, czy opinia jest na stronie książki
-          
-                driver.FindElement(REPO.DIV_opinion_test);
-                Assert.Pass();
-            
+            driver.FindElement(REPO.DIV_opinion_test);
+            Assert.Pass();
 
         }
 

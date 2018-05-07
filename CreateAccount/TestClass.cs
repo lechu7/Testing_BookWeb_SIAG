@@ -15,7 +15,6 @@ namespace Registration
         FirefoxDriverService service;
         MenuRegister mr = new MenuRegister();
 
-
         [SetUp]
         public void SetUp()
         {
@@ -33,9 +32,96 @@ namespace Registration
             mr.ClickRegistrationTab(driver, REPO.TB_UpMain_register);
             Thread.Sleep(1500);
             mr.ClickRegistrationButton(driver, REPO.BT_register_register);
-            //ToDo Czy wyskakuje error
+            mr.CheckShowError(driver, REPO.PUWin_register_6errors_emptyInputs);
         }
 
+        //KROK 2 Rejestracja jedynie z Nazwa Użytkownika (Lenght< 3)
+        [Test]
+        public void Registration2()
+        {
+            mr.ClickRegistrationTab(driver, REPO.TB_UpMain_register);
+            Thread.Sleep(1500);
+            mr.EnterUserName(driver, "12", REPO.ET_register_username);
+            mr.ClickRegistrationButton(driver, REPO.BT_register_register);
+            mr.CheckShowError(driver, REPO.PUWin_register_5errors_UserNameTo3);
+        }
+
+        //KROK 3 Rejestracja jedynie z Nazwa Użytkownika 
+        [Test]
+        public void Registration3()
+        {
+            mr.ClickRegistrationTab(driver, REPO.TB_UpMain_register);
+            Thread.Sleep(1500);
+            mr.EnterUserName(driver, REPO.RegistartionTestUserName, REPO.ET_register_username);
+            mr.ClickRegistrationButton(driver, REPO.BT_register_register);
+            mr.CheckShowError(driver, REPO.PUWin_register_4errors_OnlyUserName);
+        }
+
+        //KROK 4 Rejestracja jedynie z mailem 
+        [Test]
+        public void Registration4()
+        {
+            mr.ClickRegistrationTab(driver, REPO.TB_UpMain_register);
+            Thread.Sleep(1500);
+            mr.EnterMail(driver,REPO.mailUserTest,REPO.ET_register_email);
+            mr.ClickRegistrationButton(driver, REPO.BT_register_register);
+            mr.CheckShowError(driver, REPO.PUWin_register_5errors_UserNameTo3);
+        }
+
+        //KROK 5 Rejestracja istniejący użytkownik + istniejący mail + hasło
+        [Test]
+        public void Registration5()
+        {
+            mr.ClickRegistrationTab(driver, REPO.TB_UpMain_register);
+            Thread.Sleep(1500);
+            mr.EnterUserName(driver, REPO.loginUser, REPO.ET_register_username);
+            mr.EnterMail(driver, REPO.mailUser, REPO.ET_register_email);
+            mr.EnterPassword(driver, REPO.passUserToRegistration, REPO.ET_register_password);
+            mr.ClickRegistrationButton(driver, REPO.BT_register_register);
+            mr.CheckShowError(driver,REPO.PUWin_register_2errors_ExistUserNameAndExistEmail);
+        }
+
+        //KROK 6 Rejestracja istniejący użytkownik + mail + hasło
+        [Test]
+        public void Registration6()
+        {
+            mr.ClickRegistrationTab(driver, REPO.TB_UpMain_register);
+            Thread.Sleep(1500);
+            mr.EnterUserName(driver, REPO.loginUser, REPO.ET_register_username);
+            mr.EnterMail(driver, REPO.RegistartionTestUserEmail, REPO.ET_register_email);
+            mr.EnterPassword(driver, REPO.passUserToRegistration, REPO.ET_register_password);
+            mr.ClickRegistrationButton(driver, REPO.BT_register_register);
+            mr.CheckShowError(driver, REPO.PUWin_register_1error);
+        }
+
+        //KROK 7 Rejestracja użytkownik + istniejący mail + hasło
+        [Test]
+        public void Registration7()
+        {
+            mr.ClickRegistrationTab(driver, REPO.TB_UpMain_register);
+            Thread.Sleep(1500);
+            mr.EnterUserName(driver, REPO.RegistartionTestUserName, REPO.ET_register_username);
+            mr.EnterMail(driver, REPO.mailUser, REPO.ET_register_email);
+            mr.EnterPassword(driver, REPO.passUserToRegistration, REPO.ET_register_password);
+            mr.ClickRegistrationButton(driver, REPO.BT_register_register);
+            mr.CheckShowError(driver, REPO.PUWin_register_1error);
+        }
+
+        //KROK 8 Rejestracja poprawna użytkownik+ mail+hasło
+        [Test]
+        public void Registration8()
+        {
+            mr.ClickRegistrationTab(driver, REPO.TB_UpMain_register);
+            Thread.Sleep(1500);
+            mr.EnterUserName(driver, REPO.RegistartionTestUserName, REPO.ET_register_username);
+            mr.EnterMail(driver, REPO.RegistartionTestUserEmail, REPO.ET_register_email);
+            mr.EnterPassword(driver, REPO.passUserToRegistration, REPO.ET_register_password);
+            mr.ClickRegistrationButton(driver, REPO.BT_register_register);
+            Thread.Sleep(1500);
+            mr.CheckRegister(driver, REPO.PUWin_register_registerTestowyUserToDelete);
+            Assert.Pass();
+            DeleteUsers.Delete(driver,REPO.RegistartionTestUserName);
+        }
 
         [TearDown]
         public void TearDown()

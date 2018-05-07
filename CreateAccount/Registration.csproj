@@ -43,6 +43,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DeleteUsers.cs" />
     <Compile Include="MenuRegister.cs" />
     <Compile Include="TestClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -54,6 +55,10 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Login\Login.csproj">
+      <Project>{92c62397-fb12-454b-935c-1f916b208de1}</Project>
+      <Name>Login</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RepoClass\RepoClass.csproj">
       <Project>{1110af91-27ab-460b-8652-105c9e34461c}</Project>
       <Name>RepoClass</Name>
