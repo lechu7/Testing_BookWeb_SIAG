@@ -74,9 +74,9 @@ namespace Registration
         {
             mr.ClickRegistrationTab(driver, REPO.TB_UpMain_register);
             Thread.Sleep(1500);
-            mr.EnterUserName(driver, REPO.loginUser, REPO.ET_register_username);
-            mr.EnterMail(driver, REPO.mailUser, REPO.ET_register_email);
-            mr.EnterPassword(driver, REPO.passUserToRegistration, REPO.ET_register_password);
+            mr.EnterUserName(driver, REPO.loginUser1, REPO.ET_register_username);
+            mr.EnterMail(driver, REPO.mailUser1, REPO.ET_register_email);
+            mr.EnterPassword(driver, REPO.passUserToRegistration1, REPO.ET_register_password);
             mr.ClickRegistrationButton(driver, REPO.BT_register_register);
             mr.CheckShowError(driver,REPO.PUWin_register_2errors_ExistUserNameAndExistEmail);
         }
@@ -87,9 +87,9 @@ namespace Registration
         {
             mr.ClickRegistrationTab(driver, REPO.TB_UpMain_register);
             Thread.Sleep(1500);
-            mr.EnterUserName(driver, REPO.loginUser, REPO.ET_register_username);
+            mr.EnterUserName(driver, REPO.loginUser1, REPO.ET_register_username);
             mr.EnterMail(driver, REPO.RegistartionTestUserEmail, REPO.ET_register_email);
-            mr.EnterPassword(driver, REPO.passUserToRegistration, REPO.ET_register_password);
+            mr.EnterPassword(driver, REPO.passUserToRegistration1, REPO.ET_register_password);
             mr.ClickRegistrationButton(driver, REPO.BT_register_register);
             mr.CheckShowError(driver, REPO.PUWin_register_1error);
         }
@@ -101,8 +101,8 @@ namespace Registration
             mr.ClickRegistrationTab(driver, REPO.TB_UpMain_register);
             Thread.Sleep(1500);
             mr.EnterUserName(driver, REPO.RegistartionTestUserName, REPO.ET_register_username);
-            mr.EnterMail(driver, REPO.mailUser, REPO.ET_register_email);
-            mr.EnterPassword(driver, REPO.passUserToRegistration, REPO.ET_register_password);
+            mr.EnterMail(driver, REPO.mailUser1, REPO.ET_register_email);
+            mr.EnterPassword(driver, REPO.passUserToRegistration1, REPO.ET_register_password);
             mr.ClickRegistrationButton(driver, REPO.BT_register_register);
             mr.CheckShowError(driver, REPO.PUWin_register_1error);
         }
@@ -115,12 +115,13 @@ namespace Registration
             Thread.Sleep(1500);
             mr.EnterUserName(driver, REPO.RegistartionTestUserName, REPO.ET_register_username);
             mr.EnterMail(driver, REPO.RegistartionTestUserEmail, REPO.ET_register_email);
-            mr.EnterPassword(driver, REPO.passUserToRegistration, REPO.ET_register_password);
+            mr.EnterPassword(driver, REPO.passUserToRegistration1, REPO.ET_register_password);
             mr.ClickRegistrationButton(driver, REPO.BT_register_register);
             Thread.Sleep(1500);
             mr.CheckRegister(driver, REPO.PUWin_register_registerTestowyUserToDelete);
-            Assert.Pass();
-            DeleteUsers.Delete(driver,REPO.RegistartionTestUserName);
+
+            //Usuwanie naszego Testowego Użytkownika "TestowyUserToDelete"
+            DeleteUser.Delete(driver,REPO.RegistartionTestUserName);
         }
 
         [TearDown]

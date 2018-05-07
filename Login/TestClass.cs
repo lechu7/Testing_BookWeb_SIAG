@@ -100,9 +100,9 @@ namespace Login
         {
             mbl.ClickLoginTab(driver, REPO.TB_UpMain_login);
             Thread.Sleep(1500);
-            mbl.EnterMail(driver, REPO.loginUser, REPO.ET_login_mail);
-            mbl.CheckMail(driver, REPO.loginUser, REPO.ET_login_mail);
-            mbl.EnterPassword(driver, REPO.passUser, REPO.ET_login_password);
+            mbl.EnterMail(driver, REPO.loginUser2, REPO.ET_login_mail);
+            mbl.CheckMail(driver, REPO.loginUser2, REPO.ET_login_mail);
+            mbl.EnterPassword(driver, REPO.passUser2, REPO.ET_login_password);
             mbl.ClickLogIn(driver, REPO.BT_login_logIn);
             Thread.Sleep(500);
             mbl.CheckLogin(driver, REPO.PUWin_home_correctLogin);
@@ -114,9 +114,9 @@ namespace Login
         {
             mbl.ClickLoginTab(driver, REPO.TB_UpMain_login);
             Thread.Sleep(1500);
-            mbl.EnterMail(driver, REPO.mailUser, REPO.ET_login_mail);
-            mbl.CheckMail(driver, REPO.mailUser, REPO.ET_login_mail);
-            mbl.EnterPassword(driver, REPO.passUser, REPO.ET_login_password);
+            mbl.EnterMail(driver, REPO.mailUser2, REPO.ET_login_mail);
+            mbl.CheckMail(driver, REPO.mailUser2, REPO.ET_login_mail);
+            mbl.EnterPassword(driver, REPO.passUser2, REPO.ET_login_password);
             mbl.ClickLogIn(driver, REPO.BT_login_logIn);
             Thread.Sleep(500);
             mbl.CheckLogin(driver, REPO.PUWin_home_correctLogin);

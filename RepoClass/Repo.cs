@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 
 
 namespace RepoClass
@@ -14,10 +15,14 @@ namespace RepoClass
         public static string loginAdmin = "admin";
         public static string passAdmin = "Admos384";
 
-        public static string mailUser = "dariuszjaros@email.com";
-        public static string loginUser = "djaros";
-        public static string passUser = "Jaros95";
-        public static string passUserToRegistration = "Jaroszewski95";
+        public static string mailUser1 = "dariuszjaros@email.com";
+        public static string loginUser1 = "djaros";
+        public static string passUser1 = "Jaros95";
+        public static string passUserToRegistration1 = "Jaroszewski95";
+
+        public static string mailUser2 = "jankwitek@email.com";
+        public static string loginUser2 = "jkwitek";
+        public static string passUser2 = "Kwitek93";
 
         public static string mailUserTest = "totalnie.testowy.test@gmail.com";
         public static string loginUserTest = "test";
@@ -79,7 +84,9 @@ namespace RepoClass
 
         //Użytkownicy
         public static By SE_users_pagination = By.XPath("//ul[@class='pagination']");
-     
+        public static By BT_users_nextPage = By.XPath("//a[contains(.,'Next →')]");
+        public static By BT_users_nextPageDisabled = By.XPath("//li[@class='next next_page disabled']");
+
 
         //Strona książki autobiografia
         public static By TA_description = By.Id("description");

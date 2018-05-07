@@ -9,7 +9,7 @@ using System.Collections.Generic;
 namespace RepoClass
 {
 
-    public class DeleteUsers
+    public class DeleteUser
     {
         
         static Login.Menu_before_login mbl = new Login.Menu_before_login();
@@ -36,12 +36,13 @@ namespace RepoClass
             //Wyszukiwanie Usera
             driver.FindElement(REPO.TB_UpMain_users).Click();
             Thread.Sleep(500);
-
-            //IWebElement pagingInfo = webDriver.FindElement(REPO.SE_users_pagination);
-            //string[] stringArray = pagingInfo.Text.Split(' ');
-            //int countPage= 
-            //int sizePagination=REPO.SE_users_pagination.
-
+            while (!IsTestElementPresent(driver,REPO.BT_users_nextPageDisabled))
+            {
+                driver.FindElement(REPO.BT_users_nextPage).Click();
+            }
+            //Kasowanie Usera
+            //ToDo Jak Daniel zrobi coś z przyciskiem usuń
+            //Teraz jest nierozpoznawalny
         }
 
         public static bool IsTestElementPresent(IWebDriver driver, By byOBJ)
