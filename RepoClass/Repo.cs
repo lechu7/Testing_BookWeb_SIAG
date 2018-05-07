@@ -5,6 +5,9 @@ namespace RepoClass
 {
     public static class REPO
     {
+        //GŁóWny ADRES NASZEGO PROJEKTU
+        public static string side = "https://siag-bookweb.herokuapp.com/";
+
         //NA KAŻDEJ ZAKŁADCE
         public static By HL_all_github = By.XPath("//a[contains(.,'github')]");
         public static By HL_all_home = By.XPath("//a[contains(.,'Powrót do strony głównej')]");

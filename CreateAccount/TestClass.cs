@@ -23,7 +23,7 @@ namespace Registration
             service.FirefoxBinaryPath = @"C:\Program Files\Mozilla Firefox\firefox.exe";
             driver = new FirefoxDriver(service);
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);//PRĘDKOŚć SKRYPTU
-            driver.Navigate().GoToUrl("http://cryptic-oasis-70750.herokuapp.com");
+            driver.Navigate().GoToUrl(REPO.side);
         }
 
         //KROK 1 "Rejestracja z pustymi polami"

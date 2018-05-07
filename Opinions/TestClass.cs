@@ -37,7 +37,7 @@ namespace Opinions
             service.FirefoxBinaryPath = @"C:\Program Files\Mozilla Firefox\firefox.exe";
             driver = new FirefoxDriver(service);
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);//PRĘDKOŚć SKRYPTU
-            driver.Navigate().GoToUrl("https://siag-bookweb.herokuapp.com");
+            driver.Navigate().GoToUrl(REPO.side);
         }
 
         [Test]
