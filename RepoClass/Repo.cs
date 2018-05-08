@@ -71,22 +71,25 @@ namespace RepoClass
         public static By PUWin_login_incorrectLoginDetails = By.XPath("//div[contains(.,'Podałeś błędne dane logowania')]");
         public static By LB_login_login = By.XPath("//div[contains(.,'Logowanie')]");
 
+        //Twój Profil
+        public static By BT_yourProfile_delete = By.Id("delete");
+
         //Strona główna przed zalogowaniem
 
         //Strona główna po zalogowaniu
         public static By PUWin_home_correctLogin = By.XPath("//div[contains(.,'Zostałeś prawidłowo zalogowany')]");
 
         //Lista książek
-        public static By TB_search = By.Id("search");
-        public static By SE_orders = By.Id("orders");
-        public static By SE_sort = By.Id("sort");
+        public static By TB_book_search = By.Id("search");
+        public static By SE_book_orders = By.Id("orders");
+        public static By SE_book_sort = By.Id("sort");
         public static By AH_book_Autobiografia = By.CssSelector("[href*='/books/1']");
 
         //Użytkownicy
         public static By SE_users_pagination = By.XPath("//ul[@class='pagination']");
         public static By BT_users_nextPage = By.XPath("//a[contains(.,'Next →')]");
         public static By BT_users_nextPageDisabled = By.XPath("//li[@class='next next_page disabled']");
-
+        public static By LB_users_TestowyUserDelete = By.XPath("//div/a[contains(.,'Użytkownik TestowyUserToDelete')]");
 
         //Strona książki autobiografia
         public static By TA_description = By.Id("description");
@@ -94,6 +97,8 @@ namespace RepoClass
         public static By BT_submit = By.Id("submit");
         public static By DIV_opinion_test = By.XPath("//div[contains(.,'test') and contains(.,'1/10') and contains(.,'nie polecam')]");
         public static By BT_return = By.CssSelector("[href*='https://siag-bookweb.herokuapp.com/books']");
+
+        
 
     }
 }

@@ -121,7 +121,7 @@ namespace Registration
             mr.CheckRegister(driver, REPO.PUWin_register_registerTestowyUserToDelete);
 
             //Usuwanie naszego Testowego Użytkownika "TestowyUserToDelete"
-            DeleteUser.Delete(driver,REPO.RegistartionTestUserName);
+            DeleteTestUser.Delete(driver,REPO.RegistartionTestUserName);
         }
 
         [TearDown]

@@ -9,13 +9,15 @@ using System.Collections.Generic;
 namespace RepoClass
 {
 
-    public class DeleteUser
+    public class DeleteTestUser
     {
         
         static Login.Menu_before_login mbl = new Login.Menu_before_login();
 
         public static void Delete(IWebDriver driver,string userName)
         {
+            bool deleteUser=false;
+
             //Wylogowanie się z Testowego
             if (IsTestElementPresent(driver,REPO.TB_UpMain_logOut))
             {
@@ -39,10 +41,19 @@ namespace RepoClass
             while (!IsTestElementPresent(driver,REPO.BT_users_nextPageDisabled))
             {
                 driver.FindElement(REPO.BT_users_nextPage).Click();
+                if (IsTestElementPresent(driver,REPO.LB_users_TestowyUserDelete))
+                {
+                    driver.FindElement(REPO.LB_users_TestowyUserDelete).Click();
+                    Thread.Sleep(500);
+                    driver.FindElement(REPO.BT_yourProfile_delete).Click();
+                    deleteUser = true;
+                    break;
+                }
             }
-            //Kasowanie Usera
-            //ToDo Jak Daniel zrobi coś z przyciskiem usuń
-            //Teraz jest nierozpoznawalny
+            if (!deleteUser)
+            {
+                Assert.Fail("Nie udało się skasować 'TestowyUserToDelete'");
+            }
         }
 
         public static bool IsTestElementPresent(IWebDriver driver, By byOBJ)
