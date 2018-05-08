@@ -83,7 +83,7 @@ namespace RepoClass
         public static By TB_book_search = By.Id("search");
         public static By SE_book_orders = By.Id("orders");
         public static By SE_book_sort = By.Id("sort");
-        public static By AH_book_Autobiografia = By.CssSelector("[href*='/books/1']");
+        public static By BT_book_Autobiografia = By.XPath("//a[contains(.,'Autobiografia')]");
 
         //Użytkownicy
         public static By SE_users_pagination = By.XPath("//ul[@class='pagination']");
@@ -96,9 +96,9 @@ namespace RepoClass
         public static By SE_opinion_rate = By.Id("opinion_rate");
         public static By BT_submit = By.Id("submit");
         public static By DIV_opinion_test = By.XPath("//div[contains(.,'test') and contains(.,'1/10') and contains(.,'nie polecam')]");
-        public static By BT_return = By.CssSelector("[href*='https://siag-bookweb.herokuapp.com/books']");
+        public static By BT_return = By.XPath("//a[contains(.,'Powrót')]");
 
-        
+
 
     }
 }

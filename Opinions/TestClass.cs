@@ -42,7 +42,7 @@ namespace Opinions
             driver.FindElement(REPO.TB_UpMain_books).Click();
 
             //wybranie Autobiografia
-            bl.Click_on_book_Autobiografia(driver, REPO.AH_book_Autobiografia);
+            bl.Click_on_book_Autobiografia(driver, REPO.BT_book_Autobiografia);
 
             //dodanie opinii
             bp.Add_description(driver, REPO.TA_description, "nie polecam");
@@ -58,7 +58,38 @@ namespace Opinions
         [TearDown]
         public void TearDown()
         {
+            //wylogowanie
+            driver.Navigate().GoToUrl(REPO.side);
+            driver.FindElement(REPO.TB_UpMain_logOut).Click();
+            //logowanie jako admin
+            mbl.ClickLoginTab(driver, REPO.TB_UpMain_login);
+            Thread.Sleep(1500);
+            mbl.EnterMail(driver, REPO.mailAdmin, REPO.ET_login_mail);
+            mbl.EnterPassword(driver, REPO.passAdmin, REPO.ET_login_password);
+            mbl.ClickLogIn(driver, REPO.BT_login_logIn);
+            Thread.Sleep(500);
+
+            //przejście do listy książek
+            driver.FindElement(REPO.TB_UpMain_books).Click();
+
+            //wybranie Autobiografia
+            bl.Click_on_book_Autobiografia(driver, REPO.BT_book_Autobiografia);
+
+            //usuwanie opinii użytkownika test
+            try
+            {
+                while (true)
+                {
+                    driver.FindElement(By.XPath("//div[contains(.,'test')]/a[contains(.,'Usuń')]")).Click();
+                }
+
+            }
+            catch (Exception) { }
+
+
             driver.Quit();
+
+
         }
     }
 }
