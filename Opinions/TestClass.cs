@@ -46,14 +46,41 @@ namespace Opinions
 
             //dodanie opinii
             bp.Add_description(driver, REPO.TA_books_page_description, "nie polecam");
-            bp.Add_rate(driver, REPO.SE_books_page_opinion_rate, 0);
+            bp.Add_rate(driver, REPO.SE_books_page_opinionRate, 0);
             bp.Submit_opinion(driver, REPO.BT_books_page_submit);
 
             //sprawdzenie, czy opinia jest na stronie książki
-            driver.FindElement(REPO.DIV_books_page_opinion_test);
+            driver.FindElement(REPO.DIV_books_page_opinionTest);
             Assert.Pass();
 
         }
+        [Test]
+        public void Opinion2()//dodanie opinii bez opisu - strona książki
+        {
+            //logowanie
+            mbl.ClickLoginTab(driver, REPO.TB_UpMain_login);
+            Thread.Sleep(1500);
+            mbl.EnterMail(driver, REPO.loginUserTest, REPO.ET_login_mail);
+            mbl.EnterPassword(driver, REPO.passUserTest, REPO.ET_login_password);
+            mbl.ClickLogIn(driver, REPO.BT_login_logIn);
+            Thread.Sleep(500);
+
+            //przejście do listy książek
+            driver.FindElement(REPO.TB_UpMain_books).Click();
+
+            //wybranie Autobiografia
+            bl.Click_on_book_Autobiografia(driver, REPO.BT_book_Autobiografia);
+
+            //dodanie opinii
+            bp.Add_rate(driver, REPO.SE_books_page_opinionRate, 0);
+            bp.Submit_opinion(driver, REPO.BT_books_page_submit);
+
+            //sprawdzenie, czy opinia jest na stronie książki
+            driver.FindElement(REPO.DIV_books_page_rateTest);
+            Assert.Pass();
+
+        }
+
 
         [TearDown]
         public void TearDown()

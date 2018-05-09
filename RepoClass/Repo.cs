@@ -93,9 +93,10 @@ namespace RepoClass
 
         //Strona książki autobiografia
         public static By TA_books_page_description = By.Id("description");
-        public static By SE_books_page_opinion_rate = By.Id("opinion_rate");
+        public static By SE_books_page_opinionRate = By.Id("opinion_rate");
         public static By BT_books_page_submit = By.Id("submit");
-        public static By DIV_books_page_opinion_test = By.XPath("//div[contains(.,'test') and contains(.,'1/10') and contains(.,'nie polecam')]");
+        public static By DIV_books_page_rateTest = By.XPath("//div[contains(.,'test ocenił 1/10: \n')]");
+        public static By DIV_books_page_opinionTest = By.XPath("//div[contains(.,'test ocenił 1/10: nie polecam')]");
         public static By BT_books_page_return = By.XPath("//a[contains(.,'Powrót')]");
 
 
