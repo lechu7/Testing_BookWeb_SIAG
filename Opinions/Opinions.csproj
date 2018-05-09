@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Books_page.cs" />
     <Compile Include="List_of_users.cs" />
+    <Compile Include="LoremIpsum.cs" />
     <Compile Include="TestClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
