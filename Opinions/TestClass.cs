@@ -28,7 +28,7 @@ namespace Opinions
         }
 
         [Test]
-        public void Opinion1()//dodanie opinii z opisem - strona książki
+        public void Opinion2()//dodanie opinii z opisem - strona książki
         {
             //logowanie
             mbl.ClickLoginTab(driver, REPO.TB_UpMain_login);
@@ -55,7 +55,7 @@ namespace Opinions
 
         }
         [Test]
-        public void Opinion2()//dodanie opinii bez opisu - strona książki
+        public void Opinion1()//dodanie opinii bez opisu - strona książki
         {
             //logowanie
             mbl.ClickLoginTab(driver, REPO.TB_UpMain_login);
@@ -79,6 +79,127 @@ namespace Opinions
             driver.FindElement(REPO.DIV_books_page_rateTest);
             Assert.Pass();
 
+        }
+
+        [Test]
+        public void Opinion3()//dodanie opinii z opisem - profil uzytkownika
+        {
+            //logowanie
+            mbl.ClickLoginTab(driver, REPO.TB_UpMain_login);
+            Thread.Sleep(1500);
+            mbl.EnterMail(driver, REPO.loginUserTest, REPO.ET_login_mail);
+            mbl.EnterPassword(driver, REPO.passUserTest, REPO.ET_login_password);
+            mbl.ClickLogIn(driver, REPO.BT_login_logIn);
+            Thread.Sleep(500);
+
+            //przejście do listy książek
+            driver.FindElement(REPO.TB_UpMain_books).Click();
+
+            //wybranie Autobiografia
+            bl.Click_on_book_Autobiografia(driver, REPO.BT_book_Autobiografia);
+
+            //dodanie opinii
+            bp.Add_rate(driver, REPO.SE_books_page_opinionRate, 0);
+            bp.Add_description(driver, REPO.TA_books_page_description, "nie polecam");
+            bp.Submit_opinion(driver, REPO.BT_books_page_submit);
+
+
+            //przejście do profilu użytkownika
+            driver.FindElement(REPO.TB_UpMain_profile).Click();
+
+            //zaimplementować jak Daniel wprowadzi zmiany do profilu!!!!
+            throw new NotImplementedException("test nie zaimplementowany!");
+
+        }
+
+        [Test]
+        public void Opinion4()//dodanie opinii bez opisu - profil uzytkownika
+        {
+            //logowanie
+            mbl.ClickLoginTab(driver, REPO.TB_UpMain_login);
+            Thread.Sleep(1500);
+            mbl.EnterMail(driver, REPO.loginUserTest, REPO.ET_login_mail);
+            mbl.EnterPassword(driver, REPO.passUserTest, REPO.ET_login_password);
+            mbl.ClickLogIn(driver, REPO.BT_login_logIn);
+            Thread.Sleep(500);
+
+            //przejście do listy książek
+            driver.FindElement(REPO.TB_UpMain_books).Click();
+
+            //wybranie Autobiografia
+            bl.Click_on_book_Autobiografia(driver, REPO.BT_book_Autobiografia);
+
+            //dodanie opinii
+            bp.Add_rate(driver, REPO.SE_books_page_opinionRate, 0);
+            bp.Submit_opinion(driver, REPO.BT_books_page_submit);
+
+            //przejście do profilu użytkownika
+            driver.FindElement(REPO.TB_UpMain_profile).Click();
+            
+
+            //zaimplementować jak Daniel wprowadzi zmiany do profilu!!!!
+            throw new NotImplementedException("test nie zaimplementowany!");
+
+        }
+
+        [Test]
+        public void Opinion5()//sprawdzenie opinii innego użytkownika jako administrator - są opinie
+        {
+            //logowanie
+            mbl.ClickLoginTab(driver, REPO.TB_UpMain_login);
+            mbl.EnterMail(driver, REPO.loginUserTest, REPO.ET_login_mail);
+            mbl.EnterPassword(driver, REPO.passUserTest, REPO.ET_login_password);
+            mbl.ClickLogIn(driver, REPO.BT_login_logIn);
+
+
+            //przejście do listy książek
+            driver.FindElement(REPO.TB_UpMain_books).Click();
+
+            //wybranie Autobiografia
+            bl.Click_on_book_Autobiografia(driver, REPO.BT_book_Autobiografia);
+
+            //dodanie opinii
+            bp.Add_rate(driver, REPO.SE_books_page_opinionRate, 0);
+            bp.Submit_opinion(driver, REPO.BT_books_page_submit);
+
+            //wylogowanie
+            driver.Navigate().GoToUrl(REPO.side);
+            driver.FindElement(REPO.TB_UpMain_logOut).Click();
+
+            //logowanie jako admin
+            mbl.ClickLoginTab(driver, REPO.TB_UpMain_login);
+            mbl.EnterMail(driver, REPO.mailAdmin, REPO.ET_login_mail);
+            mbl.EnterPassword(driver, REPO.passAdmin, REPO.ET_login_password);
+            mbl.ClickLogIn(driver, REPO.BT_login_logIn);
+
+
+            //przejście do listy użytkowników
+            driver.FindElement(REPO.TB_UpMain_users).Click();
+
+            //przejście do użytkownika test
+            List_of_users.FindTestUser();
+
+            //zaimplementować jak Daniel wprowadzi zmiany do profilu!!!!
+            throw new NotImplementedException("test nie zaimplementowany!");
+        }
+
+        [Test]
+        public void Opinion6()//sprawdzenie opinii innego użytkownika jako administrator - brak opinii
+        {
+            //logowanie jako admin
+            mbl.ClickLoginTab(driver, REPO.TB_UpMain_login);
+            mbl.EnterMail(driver, REPO.mailAdmin, REPO.ET_login_mail);
+            mbl.EnterPassword(driver, REPO.passAdmin, REPO.ET_login_password);
+            mbl.ClickLogIn(driver, REPO.BT_login_logIn);
+
+
+            //przejście do listy użytkowników
+            driver.FindElement(REPO.TB_UpMain_users).Click();
+
+            //przejście do użytkownika test
+            List_of_users.FindTestUser();
+            //zaimplementować jak Daniel wprowadzi zmiany do profilu!!!!
+            throw new NotImplementedException("test nie zaimplementowany!");
         }
 
 

@@ -49,6 +49,7 @@ namespace RepoClass
         public static By TB_UpMain_users = By.Id("users");
         public static By TB_UpMain_addBook = By.Id("addbook");
         public static By TB_UpMain_logOut = By.Id("logout");
+        public static By TB_UpMain_profile = By.Id("profile");
 
         //Strona Rejestracji
         public static By ET_register_username = By.Id("username");
@@ -73,6 +74,7 @@ namespace RepoClass
 
         //Twój Profil
         public static By BT_yourProfile_delete = By.Id("delete");
+        
 
         //Strona główna przed zalogowaniem
 
