@@ -28,7 +28,7 @@ namespace Opinions
         }
 
         [Test]
-        public void Opinion1()//dodanie opinii jako zwykły user
+        public void Opinion1()//dodanie opinii z opisem - strona książki
         {
             //logowanie
             mbl.ClickLoginTab(driver, REPO.TB_UpMain_login);
@@ -45,12 +45,12 @@ namespace Opinions
             bl.Click_on_book_Autobiografia(driver, REPO.BT_book_Autobiografia);
 
             //dodanie opinii
-            bp.Add_description(driver, REPO.TA_description, "nie polecam");
-            bp.Add_rate(driver, REPO.SE_opinion_rate, 0);
-            bp.Submit_opinion(driver, REPO.BT_submit);
+            bp.Add_description(driver, REPO.TA_books_page_description, "nie polecam");
+            bp.Add_rate(driver, REPO.SE_books_page_opinion_rate, 0);
+            bp.Submit_opinion(driver, REPO.BT_books_page_submit);
 
             //sprawdzenie, czy opinia jest na stronie książki
-            driver.FindElement(REPO.DIV_opinion_test);
+            driver.FindElement(REPO.DIV_books_page_opinion_test);
             Assert.Pass();
 
         }

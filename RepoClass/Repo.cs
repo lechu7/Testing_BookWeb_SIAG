@@ -92,11 +92,11 @@ namespace RepoClass
         public static By LB_users_TestowyUserDelete = By.XPath("//div/a[contains(.,'Użytkownik TestowyUserToDelete')]");
 
         //Strona książki autobiografia
-        public static By TA_description = By.Id("description");
-        public static By SE_opinion_rate = By.Id("opinion_rate");
-        public static By BT_submit = By.Id("submit");
-        public static By DIV_opinion_test = By.XPath("//div[contains(.,'test') and contains(.,'1/10') and contains(.,'nie polecam')]");
-        public static By BT_return = By.XPath("//a[contains(.,'Powrót')]");
+        public static By TA_books_page_description = By.Id("description");
+        public static By SE_books_page_opinion_rate = By.Id("opinion_rate");
+        public static By BT_books_page_submit = By.Id("submit");
+        public static By DIV_books_page_opinion_test = By.XPath("//div[contains(.,'test') and contains(.,'1/10') and contains(.,'nie polecam')]");
+        public static By BT_books_page_return = By.XPath("//a[contains(.,'Powrót')]");
 
 
 
