@@ -13,10 +13,8 @@ namespace Login
     {
         public static IWebDriver driver;
         FirefoxDriverService service;
-        
-        
+       
         Menu_before_login mbl = new Menu_before_login();
-
 
         [SetUp]
         public void SetUp()

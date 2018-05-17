@@ -45,8 +45,14 @@ namespace RepoClass
         //OBIEKTY
         //NA KAŻDEJ ZAKŁADCE
         public static By HL_all_github = By.XPath("//a[contains(.,'github')]");
-        public static By HL_all_home = By.XPath("//a[contains(.,'Powrót do strony głównej')]");
         public static By LB_all_wzim = By.XPath("//small[contains(.,'Wydział Zastosowań Informatyki i Informatyki')]");
+        public static By TB_all_search = By.Id("search");
+        public static By SE_all_orders = By.Id("orders");
+        public static By SE_all_sort = By.Id("sort");
+        public static By BT_all_search = By.Name("commit");
+        //na prawie każdej
+        public static By HL_almostAll_toHome = By.XPath("//a[contains(.,'Powrót do strony głównej')]");
+        public static By HL_almostAll_return = By.XPath("//a[contains(.,'Powrót')]");
 
         //Przyciski górnego menu 
         public static By TB_UpMain_register = By.Id("register");
@@ -57,8 +63,12 @@ namespace RepoClass
         public static By TB_UpMain_addBook = By.Id("addbook");
         public static By TB_UpMain_logOut = By.Id("logout");
         public static By TB_UpMain_profile = By.Id("profile");
+        public static By TB_UpMain_authors = By.Id("authors");
 
         //Strona Rejestracji
+        public static By LB_register_usernameLB = By.XPath("//div[contains(.,'Nazwa użytkownika')]");
+        public static By LB_register_emailLB = By.XPath("//div[contains(.,'Email')]");
+        public static By LB_register_passwordLB = By.XPath("//div[contains(.,'Hasło')]");
         public static By ET_register_username = By.Id("username");
         public static By ET_register_email = By.Id("email");
         public static By ET_register_password = By.Id("password");
@@ -78,27 +88,35 @@ namespace RepoClass
         public static By BT_login_logIn = By.Id("submit");
         public static By PUWin_login_incorrectLoginDetails = By.XPath("//div[contains(.,'Podałeś błędne dane logowania')]");
         public static By LB_login_login = By.XPath("//div[contains(.,'Logowanie')]");
+        public static By LB_login_mailLB = By.XPath("//div[contains(.,'Email/Login')]");
+        public static By LB_login_passLB = By.XPath("//div[contains(.,'Hasło')]");
 
         //Twój Profil
         public static By BT_yourProfile_delete = By.Id("delete");
-        
+
 
         //Strona główna przed zalogowaniem
+        public static By LB_homeBeforeLogin_bookWeb = By.XPath("//h1[contains(.,'BookWeb - Super Firma!')]");
+        public static By LB_homeBeforeLogin_teamProject = By.XPath("//h3[contains(.,'Projekt zespołowy')]");
 
         //Strona główna po zalogowaniu
         public static By PUWin_home_correctLogin = By.XPath("//div[contains(.,'Zostałeś prawidłowo zalogowany')]");
 
-        //Lista książek
-        public static By TB_book_search = By.Id("search");
-        public static By SE_book_orders = By.Id("orders");
-        public static By SE_book_sort = By.Id("sort");
+        //Strona Lista książek
         public static By BT_book_Autobiografia = By.XPath("//a[contains(.,'Autobiografia')]");
+        public static By SE_book_pagination = By.ClassName("pagination");
+        public static By TR_book_bookid10 = By.Id("book-10");
 
-        //Użytkownicy
+        //Strona Użytkownicy
         public static By SE_users_pagination = By.XPath("//ul[@class='pagination']");
         public static By BT_users_nextPage = By.XPath("//a[contains(.,'Next →')]");
         public static By BT_users_nextPageDisabled = By.XPath("//li[@class='next next_page disabled']");
         public static By LB_users_TestowyUserDelete = By.XPath("//div/a[contains(.,'Użytkownik TestowyUserToDelete')]");
+        public static By TR_users_userid10 = By.ClassName("user-10");
+
+        //Strona Autorzy
+        public static By HL_authors_AlbertCamus = By.XPath("//a[contains(.,'Książki autora: Albert Camus')]");
+        public static By HL_authors_Dzuma = By.XPath("//a[contains(.,'Dżuma')]");
 
         //Strona książki autobiografia
         public static By TA_books_page_description = By.Id("description");
