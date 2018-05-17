@@ -1,14 +1,21 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
+using System;
+using System.Collections.Generic;
 
 
 namespace RepoClass
 {
+
     public static class REPO
     {
         
         //GŁóWNY ADRES NASZEGO PROJEKTU
         public static string side = "https://siag-bookweb.herokuapp.com/";
+
+        //URL API
+        public static string URLUsers = "http://siag-bookweb.herokuapp.com/api/users/json";
+        public static string URLBooks = "http://siag-bookweb.herokuapp.com/api/books/json";
 
         //ZMIENNE GLOBALNE
         public static string mailAdmin = "admin@example.com";
@@ -100,8 +107,5 @@ namespace RepoClass
         public static By DIV_books_page_rateTest = By.XPath("//div[contains(.,'test ocenił 1/10: \n')]");
         public static By DIV_books_page_opinionTest = By.XPath("//div[contains(.,'test ocenił 1/10: nie polecam')]");
         public static By BT_books_page_return = By.XPath("//a[contains(.,'Powrót')]");
-
-
-
     }
 }
