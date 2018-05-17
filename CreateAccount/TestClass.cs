@@ -4,6 +4,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using System.Threading;
 using RepoClass;
+using Login;
 
 
 namespace Registration
@@ -14,6 +15,8 @@ namespace Registration
         public static IWebDriver driver;
         FirefoxDriverService service;
         MenuRegister mr = new MenuRegister();
+        Menu_before_login mbl = new Menu_before_login();
+
 
         [SetUp]
         public void SetUp()
@@ -122,6 +125,23 @@ namespace Registration
 
             //Usuwanie naszego Testowego Użytkownika "TestowyUserToDelete"
             DeleteTestUser.Delete(driver,REPO.RegistartionTestUserName);
+        }
+
+        //KROK 9 Rejestracja poprawna użytkownik+ mail+hasło
+        [Test]
+        public void Registration9()
+        {
+            mr.ClickRegistrationTab(driver, REPO.TB_UpMain_login);
+            Thread.Sleep(1500);
+            mbl.EnterMail(driver, REPO.loginAdmin, REPO.ET_login_mail);
+            mbl.EnterPassword(driver, REPO.passAdmin, REPO.ET_login_password);
+            mbl.ClickLogIn(driver, REPO.BT_login_logIn);
+            Thread.Sleep(500);
+            mr.ClickRegistrationTab(driver, REPO.TB_UpMain_profile);
+            mr.ClickRegistrationButton(driver, REPO.BT_yourProfile_delete);
+            mr.CheckShowError(driver, REPO.PUWin_yourProfile_deleteAdmin);
+
+
         }
 
         [TearDown]

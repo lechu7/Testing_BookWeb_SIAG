@@ -93,7 +93,7 @@ namespace RepoClass
 
         //Twój Profil
         public static By BT_yourProfile_delete = By.Id("delete");
-
+        public static By PUWin_yourProfile_deleteAdmin = By.XPath("//div[contains(.,'Nie możesz usunąć administratora')]");
 
         //Strona główna przed zalogowaniem
         public static By LB_homeBeforeLogin_bookWeb = By.XPath("//h1[contains(.,'BookWeb - Super Firma!')]");
