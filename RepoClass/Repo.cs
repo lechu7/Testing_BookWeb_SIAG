@@ -94,6 +94,7 @@ namespace RepoClass
         //Twój Profil
         public static By BT_yourProfile_delete = By.Id("delete");
         public static By PUWin_yourProfile_deleteAdmin = By.XPath("//div[contains(.,'Nie możesz usunąć administratora')]");
+        public static By LB_yourProfile_yourOpinions = By.XPath("//div[contains(.,'Opinie użytkownika')]");
 
         //Strona główna przed zalogowaniem
         public static By LB_homeBeforeLogin_bookWeb = By.XPath("//h1[contains(.,'BookWeb - Super Firma!')]");
@@ -117,6 +118,16 @@ namespace RepoClass
         //Strona Autorzy
         public static By HL_authors_AlbertCamus = By.XPath("//a[contains(.,'Książki autora: Albert Camus')]");
         public static By HL_authors_Dzuma = By.XPath("//a[contains(.,'Dżuma')]");
+
+        //Strona Dodaj ksiazke
+        public static By LB_addBook_addBook = By.XPath("//a[contains(.,'Dodaj książkę')]");
+        public static By LB_addBook_title = By.XPath("//a[contains(.,'Tytuł')]");
+        public static By LB_addBook_author = By.XPath("//a[contains(.,'Autor')]");
+        public static By LB_addBook_genre = By.XPath("//a[contains(.,'Gatunek')]");
+        public static By ET_addBook_title = By.Id("title");
+        public static By ET_addBook_author = By.Id("author");
+        public static By ET_addBook_genre = By.Id("genre");
+        public static By BT_addBook_add = By.Id("submit");
 
         //Strona książki autobiografia
         public static By TA_books_page_description = By.Id("description");

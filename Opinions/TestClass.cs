@@ -198,6 +198,8 @@ namespace Opinions
 
             //przejście do użytkownika test
             List_of_users.FindTestUser();
+
+
             //zaimplementować jak Daniel wprowadzi zmiany do profilu!!!!
             throw new NotImplementedException("test nie zaimplementowany!");
         }
