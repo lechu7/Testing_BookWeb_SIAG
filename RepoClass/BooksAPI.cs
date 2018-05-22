@@ -28,8 +28,8 @@ namespace RepoClass
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri(REPO.URLBooks);
 
-            client.DefaultRequestHeaders.Accept.Add(
-            new MediaTypeWithQualityHeaderValue("application/json"));
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
 
             HttpResponseMessage response = client.GetAsync(urlParameters).Result;
             if (response.IsSuccessStatusCode)
