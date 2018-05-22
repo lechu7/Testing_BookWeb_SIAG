@@ -95,6 +95,9 @@ namespace RepoClass
         public static By BT_yourProfile_delete = By.Id("delete");
         public static By PUWin_yourProfile_deleteAdmin = By.XPath("//div[contains(.,'Nie możesz usunąć administratora')]");
         public static By LB_yourProfile_yourOpinions = By.XPath("//div[contains(.,'Opinie użytkownika')]");
+        public static By DIV_yourProfile_opinion_book = By.XPath("//div/a[contains(.,'Autobiografia')]");//\n    <div>1/10</div>\n    <div>nie polecam</div>')]");
+        public static By DIV_yourProfile_opinion_rate = By.XPath("//div[contains(.,'1/10')]");
+        public static By DIV_yourProfile_opinion_description = By.XPath("//div[contains(.,'nie polecam')]");
 
         //Strona główna przed zalogowaniem
         public static By LB_homeBeforeLogin_bookWeb = By.XPath("//h1[contains(.,'BookWeb - Super Firma!')]");
@@ -107,6 +110,8 @@ namespace RepoClass
         public static By BT_book_Autobiografia = By.XPath("//a[contains(.,'Autobiografia')]");
         public static By SE_book_pagination = By.ClassName("pagination");
         public static By TR_book_bookid10 = By.Id("book-10");
+        public static By BT_book_nextPage = By.XPath("//li[@class='next next_page ']/a[1]");
+        public static By BT_book_nextPage_disabled = By.XPath("//li[@class='next next_page disabled']/a[1]");
 
         //Strona Użytkownicy
         public static By SE_users_pagination = By.XPath("//ul[@class='pagination']");
