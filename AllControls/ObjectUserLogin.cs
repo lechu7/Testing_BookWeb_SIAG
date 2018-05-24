@@ -78,23 +78,23 @@ namespace AllControls
             booksList.Add(REPO.LB_all_wzim);
 
             //users
-            //usersList.Add(REPO.TB_UpMain_logOut);
-            //usersList.Add(REPO.TB_UpMain_profile);
-            //usersList.Add(REPO.TB_UpMain_mainsite);
-            //usersList.Add(REPO.TB_UpMain_books);
-            //usersList.Add(REPO.TB_UpMain_users);
-            //usersList.Add(REPO.TB_UpMain_authors);
+            usersList.Add(REPO.TB_UpMain_logOut);
+            usersList.Add(REPO.TB_UpMain_profile);
+            usersList.Add(REPO.TB_UpMain_mainsite);
+            usersList.Add(REPO.TB_UpMain_books);
+            usersList.Add(REPO.TB_UpMain_users);
+            usersList.Add(REPO.TB_UpMain_authors);
 
-            //usersList.Add(REPO.TB_all_search);
-            //usersList.Add(REPO.SE_all_orders);
-            //usersList.Add(REPO.SE_all_sort);
-            //usersList.Add(REPO.BT_all_search);
+            usersList.Add(REPO.TB_all_search);
+            usersList.Add(REPO.SE_all_orders);
+            usersList.Add(REPO.SE_all_sort);
+            usersList.Add(REPO.BT_all_search);
 
-            //usersList.Add(REPO.SE_users_pagination);
-            //usersList.Add(REPO.TR_users_userid10);
+            usersList.Add(REPO.SE_users_pagination);
+            usersList.Add(REPO.TR_users_userid10);
 
-            //usersList.Add(REPO.HL_all_github);
-            //usersList.Add(REPO.LB_all_wzim);
+            usersList.Add(REPO.HL_all_github);
+            usersList.Add(REPO.LB_all_wzim);
 
             //authors
             authorsList.Add(REPO.TB_UpMain_logOut);
