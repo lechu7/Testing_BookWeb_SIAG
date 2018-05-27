@@ -379,7 +379,10 @@ namespace Books
 
             //wyszukanie książki
             driver.FindElement(REPO.TB_all_search).SendKeys("Suszarka na pranie STANDARD 18m");
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+            js.ExecuteScript("javascript:window.scrollBy(0,350)");
             driver.FindElement(REPO.BT_all_search).Click();
+            js.ExecuteScript("javascript:window.scrollBy(0,-350)");
             //sprawdzenie
 
             driver.FindElement(By.XPath("//h2[contains(.,'Brak obiektów dla frazy Suszarka na pranie STANDARD 18m')]"));

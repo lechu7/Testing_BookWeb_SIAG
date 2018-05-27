@@ -404,7 +404,7 @@ namespace Opinions
             {
                 while (true)
                 {
-                   // driver.FindElement(By.XPath("//a[contains(.,'Usuń')]")).Click();
+                    driver.FindElement(By.XPath("//a[contains(.,'Usuń')]")).Click();
                   
                 }
 
