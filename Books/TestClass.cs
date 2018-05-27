@@ -5,6 +5,7 @@ using OpenQA.Selenium.Firefox;
 using System.Threading;
 using RepoClass;
 
+
 namespace Books
 {
     [TestFixture]
@@ -19,13 +20,13 @@ namespace Books
         [SetUp]
         public void SetUp()
         {
-
+            
             service = FirefoxDriverService.CreateDefaultService();
             service.FirefoxBinaryPath = @"C:\Program Files\Mozilla Firefox\firefox.exe";
             driver = new FirefoxDriver(service);
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);//PRĘDKOŚć SKRYPTU
             driver.Navigate().GoToUrl(REPO.side);
-
+            driver.Manage().Window.Maximize();
 
 
         }
@@ -62,7 +63,7 @@ namespace Books
             Assert.Pass();
 
 
-
+            
 
         }
 
@@ -388,15 +389,22 @@ namespace Books
         [TearDown]
         public void TearDown()
         {
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
             switch (whatShouldBeDeleted)
             {
                 case 1:
+                   
+                    js.ExecuteScript("javascript:window.scrollBy(0,350)");
                     driver.FindElement(By.XPath("//td[contains(.,'Jan Niezbędny')]/parent::tr/*/a[contains(.,'Usuń')]")).Click();
                     break;
                 case 2:
+                    
+                    js.ExecuteScript("javascript:window.scrollBy(0,350)");
                     driver.FindElement(By.XPath("//td[contains(.,'Albert Camus')]/parent::tr/*/a[contains(.,'Usuń')]")).Click();
                     break;
                 case 3:
+                    
+                    js.ExecuteScript("javascript:window.scrollBy(0,350)");
                     driver.FindElement(By.XPath("//td[contains(.,'Jan Niezbędny')]/parent::tr/*/a[contains(.,'Usuń')]")).Click();
                     break;
                 default:

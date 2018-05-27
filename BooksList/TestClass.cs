@@ -32,7 +32,7 @@ namespace BooksList
             driver = new FirefoxDriver(service);
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);//PRĘDKOŚć SKRYPTU
             driver.Navigate().GoToUrl(REPO.side);
-
+            driver.Manage().Window.Maximize();
             //przejście do listy książek
             driver.FindElement(REPO.TB_UpMain_books).Click();
 

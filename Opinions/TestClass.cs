@@ -25,6 +25,7 @@ namespace Opinions
             driver = new FirefoxDriver(service);
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);//PRĘDKOŚć SKRYPTU
             driver.Navigate().GoToUrl(REPO.side);
+            driver.Manage().Window.Maximize();
         }
 
         [Test]
@@ -403,7 +404,8 @@ namespace Opinions
             {
                 while (true)
                 {
-                    driver.FindElement(By.XPath("//a[contains(.,'Usuń')]")).Click();
+                   // driver.FindElement(By.XPath("//a[contains(.,'Usuń')]")).Click();
+                  
                 }
 
             }
