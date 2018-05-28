@@ -141,5 +141,17 @@ namespace RepoClass
         public static By DIV_books_page_rateTest = By.XPath("//div[contains(.,'test ocenił 1/10: \n')]");
         public static By DIV_books_page_opinionTest = By.XPath("//div[contains(.,'test ocenił 1/10: nie polecam')]");
         public static By BT_books_page_return = By.XPath("//a[contains(.,'Powrót')]");
+
+
+        //Dominik Gołdyn Testy Elementy Nowe
+        public static By NoBookError = By.XPath("//h2[contains(.,'Brak obiektów dla frazy')]");
+
+        public static By SearchingTitleASC = By.XPath("//div[contains(.,'title,ASC')]");
+        public static By SearchingAuthorASC = By.XPath("//div[contains(.,'author,ASC')]");
+        public static By SearchingGenreASC = By.XPath("//div[contains(.,'genre,ASC')]");
+
+        public static By SearchingTitleDESC = By.XPath("//div[contains(.,'title,DESC')]");
+        public static By SearchingAuthorDESC = By.XPath("//div[contains(.,'author,DESC')]");
+        public static By SearchingGenreDESC = By.XPath("//div[contains(.,'genre,DESC')]");
     }
 }
