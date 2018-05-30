@@ -52,8 +52,7 @@ namespace AllControls
             homePageList.Add(REPO.BT_all_search);
 
 
-            homePageList.Add(REPO.LB_homeBeforeLogin_bookWeb);
-            homePageList.Add(REPO.LB_homeBeforeLogin_teamProject);
+
             homePageList.Add(REPO.HL_all_github);
             homePageList.Add(REPO.LB_all_wzim);
 

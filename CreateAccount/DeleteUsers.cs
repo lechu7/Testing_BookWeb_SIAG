@@ -5,6 +5,7 @@ using OpenQA.Selenium.Firefox;
 using System.Threading;
 using RepoClass;
 using System.Collections.Generic;
+using OpenQA.Selenium.Interactions;
 
 namespace RepoClass
 {
@@ -43,6 +44,9 @@ namespace RepoClass
                 driver.FindElement(REPO.BT_users_nextPage).Click();
                 if (IsTestElementPresent(driver,REPO.LB_users_TestowyUserDelete))
                 {
+                    //Scrolowanie do elementu
+                    ((IJavaScriptExecutor)driver).ExecuteScript("window.scrollTo(0, document.body.scrollHeight - 150)");
+
                     driver.FindElement(REPO.LB_users_TestowyUserDelete).Click();
                     Thread.Sleep(500);
                     driver.FindElement(REPO.BT_yourProfile_delete).Click();

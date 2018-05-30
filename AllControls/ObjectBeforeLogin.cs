@@ -32,9 +32,18 @@ namespace AllControls
             homePageList.Add(REPO.SE_all_sort);
             homePageList.Add(REPO.BT_all_search);
 
+            homePageList.Add(REPO.LB_homeBeforeLogin_BookWeb);
+            homePageList.Add(REPO.LB_homeBeforeLogin_LB1);
+            homePageList.Add(REPO.LB_homeBeforeLogin_LB2);
+            homePageList.Add(REPO.LB_homeBeforeLogin_LB3);
+            homePageList.Add(REPO.IM_homeBeforeLogin_IM1);
+            homePageList.Add(REPO.IM_homeBeforeLogin_IM2);
+            homePageList.Add(REPO.IM_homeBeforeLogin_IM3);
 
-            homePageList.Add(REPO.LB_homeBeforeLogin_bookWeb);
-            homePageList.Add(REPO.LB_homeBeforeLogin_teamProject);
+
+            homePageList.Add(REPO.LB_homeBeforeLogin_add);
+            homePageList.Add(REPO.LB_homeBeforeLogin_share);
+            homePageList.Add(REPO.LB_homeBeforeLogin_discover);
             homePageList.Add(REPO.HL_all_github);
             homePageList.Add(REPO.LB_all_wzim);
 

@@ -100,8 +100,22 @@ namespace RepoClass
         public static By DIV_yourProfile_opinion_description = By.XPath("//div[contains(.,'nie polecam')]");
 
         //Strona główna przed zalogowaniem
-        public static By LB_homeBeforeLogin_bookWeb = By.XPath("//h1[contains(.,'BookWeb - Super Firma!')]");
-        public static By LB_homeBeforeLogin_teamProject = By.XPath("//h3[contains(.,'Projekt zespołowy')]");
+        public static By LB_homeBeforeLogin_add = By.XPath("//p[contains(.,'Dodawaj')]");
+        public static By LB_homeBeforeLogin_share = By.XPath("//p[contains(.,'Dziel sie!')]");
+        public static By LB_homeBeforeLogin_discover = By.XPath("//p[contains(.,'Odkrywaj')]");
+        //Kropko ze zmianą slajdu
+        public static By POINT_homeBeforeLogin_point1 = By.XPath("//p[@class='carousel-indicators']/li[0]");
+        public static By POINT_homeBeforeLogin_point2 = By.XPath("//p[@class='carousel-indicators']/li[1]");
+        public static By POINT_homeBeforeLogin_point3 = By.XPath("//p[@class='carousel-indicators']/li[2]");
+
+        public static By LB_homeBeforeLogin_BookWeb= By.XPath("//div[contains(.,'BookWeb')]");
+        public static By LB_homeBeforeLogin_LB1 = By.XPath("//p[contains(.,'Miejsce na wyrażanie Twoich opinii')]");
+        public static By LB_homeBeforeLogin_LB2 = By.XPath("//p[contains(.,'Zaloguj się, aby mieć dostęp do bazy wielu książek. ')]");
+        public static By LB_homeBeforeLogin_LB3 = By.XPath("//p[contains(.,'Co sądzą inni użytkownicy? Sprawdź bazę komentarzy i zdecyduj się na nową książkę!')]");
+
+        public static By IM_homeBeforeLogin_IM1 = By.XPath("//img[contains(@alt, 'Los Angeles')]");
+        public static By IM_homeBeforeLogin_IM2 = By.XPath("//img[contains(@alt, 'Chicago')]");
+        public static By IM_homeBeforeLogin_IM3 = By.XPath("//img[contains(@alt, 'New York')]");
 
         //Strona główna po zalogowaniu
         public static By PUWin_home_correctLogin = By.XPath("//div[contains(.,'Zostałeś prawidłowo zalogowany')]");
@@ -117,8 +131,8 @@ namespace RepoClass
         public static By SE_users_pagination = By.XPath("//ul[@class='pagination']");
         public static By BT_users_nextPage = By.XPath("//a[contains(.,'Next →')]");
         public static By BT_users_nextPageDisabled = By.XPath("//li[@class='next next_page disabled']");
-        public static By LB_users_TestowyUserDelete = By.XPath("//div/a[contains(.,'Użytkownik TestowyUserToDelete')]");
-        public static By TR_users_userid10 = By.ClassName("user-10");
+        public static By LB_users_TestowyUserDelete = By.XPath("//a[contains(.,'Użytkownik TestowyUserToDelete')]");
+        public static By TR_users_userid10 = By.PartialLinkText("Użytkownik");
 
         //Strona Autorzy
         public static By HL_authors_AlbertCamus = By.XPath("//a[contains(.,'Książki autora: Albert Camus')]");
