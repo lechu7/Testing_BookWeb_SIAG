@@ -9,11 +9,11 @@ namespace OpinionsList
 {
     public class ObjectTargetList
     {
-        string username;
-        string title;
-        string rate;
-        string description;
-        int countOpinions;
+        public string username;
+        public string title;
+        public string rate;
+        public string description;
+        public int countOpinions;
         public ObjectTargetList(string username, string title, string rate, string description, int countOpinions)
         {
             this.username=username;
