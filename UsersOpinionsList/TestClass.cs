@@ -93,14 +93,25 @@ namespace OpinionsList
                 }
                 catch (Exception)
                 {
-                    XTMPopinion += 500;
-                    Thread.Sleep(200);
-                    ((IJavaScriptExecutor)driver).ExecuteScript("window.scrollTo(0,"+XTMPopinion+")");
-                    driver.FindElement(By.PartialLinkText(targetList[i].title)).Click();
+                    try
+                    {
+                        XTMPopinion += 600;
+                        Thread.Sleep(millisecondsTimeout: 800);
+                        ((IJavaScriptExecutor)driver).ExecuteScript("window.scrollTo(0," + XTMPopinion + ")");
+                        driver.FindElement(By.PartialLinkText(targetList[i].title)).Click();
+                    }
+                    catch (Exception)
+                    {
+                        XTMPopinion += 600;
+                        Thread.Sleep(millisecondsTimeout: 800);
+                        ((IJavaScriptExecutor)driver).ExecuteScript("window.scrollTo(0," + XTMPopinion + ")");
+                        driver.FindElement(By.PartialLinkText(targetList[i].title)).Click();
+                    }
+
                 }
 
                 //Sprawdza czy ocena jest
-                xpathTMP = "//p[contains(.,'"+targetList[i].username+" ocenił "+targetList[i].rate+"/10: "+targetList[i].description+"')]";
+                xpathTMP = "//p[contains(.,'"+targetList[i].username+" ocenił "+targetList[i].rate+"/5: "+targetList[i].description+"')]";
                 Assert.True(IsTestElementPresent(driver,By.XPath(xpathTMP)));
                 driver.Navigate().Back();
 
@@ -116,7 +127,7 @@ namespace OpinionsList
                         //Kolejna strona użytkowników
                         if (userIDTMP % 10 == 0 && userIDTMP != 0)
                         {
-                            Thread.Sleep(1200);
+                            Thread.Sleep(1000);
                             ((IJavaScriptExecutor)driver).ExecuteScript("window.scrollTo(0,0)");
                             driver.FindElement(REPO.BT_users_nextPage).Click();
                             XTMPuser = 0;
