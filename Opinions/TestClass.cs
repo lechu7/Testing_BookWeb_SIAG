@@ -26,6 +26,34 @@ namespace Opinions
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);//PRĘDKOŚć SKRYPTU
             driver.Navigate().GoToUrl(REPO.side);
             driver.Manage().Window.Maximize();
+
+            //usuwanie wszystkim opinii//logowanie jako admin
+            mbl.ClickLoginTab(driver, REPO.TB_UpMain_login);
+            Thread.Sleep(1500);
+            mbl.EnterMail(driver, REPO.mailAdmin, REPO.ET_login_mail);
+            mbl.EnterPassword(driver, REPO.passAdmin, REPO.ET_login_password);
+            mbl.ClickLogIn(driver, REPO.BT_login_logIn);
+            Thread.Sleep(500);
+
+            //przejście do listy książek
+            driver.FindElement(REPO.TB_UpMain_books).Click();
+
+            //wybranie Autobiografia
+            bl.Click_on_book_Autobiografia(driver, REPO.BT_book_Autobiografia);
+
+            //usuwanie opinii użytkowników
+            try
+            {
+                while (true)
+                {
+                    driver.FindElement(By.XPath("//a[contains(.,'Usuń')]")).Click();
+                }
+
+            }
+            catch (Exception) { }
+
+            //wylogowanie
+            driver.FindElement(REPO.TB_UpMain_logOut).Click();
         }
 
         [Test]
@@ -76,6 +104,9 @@ namespace Opinions
             bp.Add_rate(driver, REPO.SE_books_page_opinionRate, 0);
             bp.Submit_opinion(driver, REPO.BT_books_page_submit);
 
+            //sprawdzenie komunikatu
+            driver.FindElement(By.XPath("//div[contains(.,'Opinia została dodana')]"));
+
             //sprawdzenie, czy opinia jest na stronie książki
             driver.FindElement(REPO.DIV_books_page_rateTest);
             Assert.Pass();
@@ -104,15 +135,17 @@ namespace Opinions
             bp.Add_description(driver, REPO.TA_books_page_description, "nie polecam");
             bp.Submit_opinion(driver, REPO.BT_books_page_submit);
 
+            //sprawdzenie komunikatu
+            driver.FindElement(By.XPath("//div[contains(.,'Opinia została dodana')]"));
 
             //przejście do profilu użytkownika
             driver.FindElement(REPO.TB_UpMain_profile).Click();
 
+            //sprawdzenie, czy opinia jest na profilu usera
+            driver.FindElement(By.XPath("//a[contains(.,'Wyspa')]"));
+            driver.FindElement(By.XPath("//div[contains(.,'1/10')]"));
+            driver.FindElement(By.XPath("//div[contains(.,'nie polecam')]"));
 
-            driver.FindElement(REPO.DIV_yourProfile_opinion_book);
-
-            driver.FindElement(REPO.DIV_yourProfile_opinion_rate);
-            driver.FindElement(REPO.DIV_yourProfile_opinion_description);
 
             Assert.Pass();
         }
@@ -268,7 +301,7 @@ namespace Opinions
             bp.Submit_opinion(driver, REPO.BT_books_page_submit);
 
             //sprawdzenie, czy wyskakuje odpowiedni komentarz
-            driver.FindElement(By.XPath("//div[contains(.,'Wymagane jest podanie wszystkich opcji. Opis może mieć max 1000znaków')]"));
+            driver.FindElement(By.XPath("//div[contains(.,'Wymagane jest podanie wszystkich opcji. Opis może mieć max 1000 znaków. Wartość oceny od 1 do 5.')]"));
             //sprawdzenie, czy opinia jest na stronie książki
             try
             {
@@ -305,14 +338,17 @@ namespace Opinions
             bp.Add_rate(driver, REPO.SE_books_page_opinionRate, 0);
             bp.Submit_opinion(driver, REPO.BT_books_page_submit);
 
+
             //usunięcie opinii
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+            js.ExecuteScript("javascript:window.scrollBy(0,350)");
             driver.FindElement(By.XPath("//a[contains(.,'Usuń')]")).Click();
             driver.FindElement(By.XPath("//div[contains(.,'Usunięto opinię')]"));
 
             //sprawdzenie
             try
             {
-                driver.FindElement(By.XPath("//div[contains(.,'test ocenił 1/10: nie polecam')]"));
+                driver.FindElement(By.XPath("//div[contains(.,'test ocenił 1/5: nie polecam')]"));
             }
             catch (NoSuchElementException)
             {
@@ -557,14 +593,14 @@ namespace Opinions
             bp.Submit_opinion(driver, REPO.BT_books_page_submit);
 
             //dodanie drugiej opinii
-            bp.Add_rate(driver, REPO.SE_books_page_opinionRate, 5);
+            bp.Add_rate(driver, REPO.SE_books_page_opinionRate, 4);
             bp.Submit_opinion(driver, REPO.BT_books_page_submit);
 
             //sprawdzenie
             driver.FindElement(By.XPath("//div[contains(.,'Dodałeś już opinię do tej książki')]"));
             try
             {
-                driver.FindElement(By.XPath("//div[contains(.,'test ocenił 6/10:')"));
+                driver.FindElement(By.XPath("//div[contains(.,'test ocenił 5/5:')"));
             }
             catch (Exception)
             {
@@ -600,7 +636,7 @@ namespace Opinions
             {
                 while (true)
                 {
-                    driver.FindElement(By.XPath("//div[contains(.,'test')]/a[contains(.,'Usuń')]")).Click();
+                    driver.FindElement(By.XPath("//p[contains(.,'test')]/a[contains(.,'Usuń')]")).Click();
                 }
 
             }

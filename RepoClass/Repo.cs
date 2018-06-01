@@ -95,8 +95,8 @@ namespace RepoClass
         public static By BT_yourProfile_delete = By.Id("delete");
         public static By PUWin_yourProfile_deleteAdmin = By.XPath("//div[contains(.,'Nie możesz usunąć administratora')]");
         public static By LB_yourProfile_yourOpinions = By.XPath("//div[contains(.,'Opinie użytkownika')]");
-        public static By DIV_yourProfile_opinion_book = By.XPath("//div/a[contains(.,'Autobiografia')]");//\n    <div>1/10</div>\n    <div>nie polecam</div>')]");
-        public static By DIV_yourProfile_opinion_rate = By.XPath("//div[contains(.,'1/10')]");
+        public static By DIV_yourProfile_opinion_book = By.XPath("//div/a[contains(.,'Wyspa')]");//\n    <div>1/10</div>\n    <div>nie polecam</div>')]");
+        public static By DIV_yourProfile_opinion_rate = By.XPath("//div[contains(.,'1/5')]");
         public static By DIV_yourProfile_opinion_description = By.XPath("//div[contains(.,'nie polecam')]");
 
         //Strona główna przed zalogowaniem
@@ -121,7 +121,7 @@ namespace RepoClass
         public static By PUWin_home_correctLogin = By.XPath("//div[contains(.,'Zostałeś prawidłowo zalogowany')]");
 
         //Strona Lista książek
-        public static By BT_book_Autobiografia = By.XPath("//a[contains(.,'Autobiografia')]");
+        public static By BT_book_Autobiografia = By.XPath("//a[contains(.,'Wyspa')]");
         public static By SE_book_pagination = By.ClassName("pagination");
         public static By TR_book_bookid10 = By.Id("book-10");
         public static By BT_book_nextPage = By.XPath("//li[@class='next next_page ']/a[1]");
@@ -136,7 +136,7 @@ namespace RepoClass
 
         //Strona Autorzy
         public static By HL_authors_AlbertCamus = By.XPath("//a[contains(.,'Książki autora: Albert Camus')]");
-        public static By HL_authors_Dzuma = By.XPath("//a[contains(.,'Dżuma')]");
+        public static By HL_authors_Dzuma = By.XPath("//a[contains(.,'Wyspa')]");
 
         //Strona Dodaj ksiazke
         public static By LB_addBook_addBook = By.XPath("//a[contains(.,'Dodaj książkę')]");
@@ -152,8 +152,8 @@ namespace RepoClass
         public static By TA_books_page_description = By.Id("description");
         public static By SE_books_page_opinionRate = By.Id("opinion_rate");
         public static By BT_books_page_submit = By.Id("submit");
-        public static By DIV_books_page_rateTest = By.XPath("//div[contains(.,'test ocenił 1/10: \n')]");
-        public static By DIV_books_page_opinionTest = By.XPath("//div[contains(.,'test ocenił 1/10: nie polecam')]");
+        public static By DIV_books_page_rateTest = By.XPath("//div[contains(.,'test ocenił 1/5: \n')]");
+        public static By DIV_books_page_opinionTest = By.XPath("//div[contains(.,'test ocenił 1/5: nie polecam')]");
         public static By BT_books_page_return = By.XPath("//a[contains(.,'Powrót')]");
 
 
