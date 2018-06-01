@@ -50,9 +50,16 @@ namespace BooksList
                 
                 string xPath1 = "//td[contains(.,'" + bookAuthor + "')]/parent::tr/td[contains(.,'" + bookGenre + "')]/parent::tr/*/a[contains(.,'" + bookTitle + "')]";
                 driver.FindElement(By.XPath(xPath1));
-                
-                
-                    
+
+
+                //sprawdzenie, czy to juz nie jest ostatni element z listy
+                if (i == booksList.Count - 1)
+                {
+                    driver.Quit();
+                    Assert.Pass();
+                }
+
+
                 //przejście do następnej strony listy
                 if (j == 9)
                 {
@@ -63,7 +70,7 @@ namespace BooksList
 
 
 
-            driver.Quit();
+            
 
 
         }
