@@ -194,7 +194,7 @@ namespace Books
             driver.FindElement(REPO.BT_addBook_add).Click();
 
             //sprawdzenie, czy wyświetla się komunikat o tym, że nie można jej dodać
-            driver.FindElement(By.XPath("//li[contains(.,'Title can')]"));
+            driver.FindElement(By.XPath("//li[contains(.,'Musisz podać tytuł')]"));
 
             //przejście do ostatniej strony listy
             driver.FindElement(REPO.TB_UpMain_books).Click();
@@ -234,7 +234,7 @@ namespace Books
             driver.FindElement(REPO.BT_addBook_add).Click();
 
             //sprawdzenie, czy wyświetla się komunikat o tym, że nie można jej dodać
-            driver.FindElement(By.XPath("//li[contains(.,'Author can')]"));
+            driver.FindElement(By.XPath("//li[contains(.,'Musisz podać autora')]"));
 
             //przejście do ostatniej strony listy
             driver.FindElement(REPO.TB_UpMain_books).Click();
@@ -274,7 +274,7 @@ namespace Books
             driver.FindElement(REPO.BT_addBook_add).Click();
 
             //sprawdzenie, czy wyświetla się komunikat o tym, że nie można jej dodać
-            driver.FindElement(By.XPath("//li[contains(.,'Genre can')]"));
+            driver.FindElement(By.XPath("//li[contains(.,'Musisz podać kategorię')]"));
 
             //przejście do ostatniej strony listy
             driver.FindElement(REPO.TB_UpMain_books).Click();
@@ -323,7 +323,7 @@ namespace Books
             driver.FindElement(By.XPath("//td[contains(.,'Jan Niezbędny')]/parent::tr/*/a[contains(.,'Usuń')]")).Click();
 
             //sprawdzenie komunikatu o usunięciu książki
-            driver.FindElement(By.XPath("//div[contains(.,'Pozyzja została usunięta')]"));
+            driver.FindElement(By.XPath("//div[contains(.,'Pozycja została usunięta')]"));
 
             //ponowne przejście do ostatniej strony listy książek
             driver.FindElement(By.XPath("//a[contains(.,'42')]")).Click();
