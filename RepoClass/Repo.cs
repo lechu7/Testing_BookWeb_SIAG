@@ -129,7 +129,7 @@ namespace RepoClass
 
         //Strona Użytkownicy
         public static By SE_users_pagination = By.XPath("//ul[@class='pagination']");
-        public static By BT_users_nextPage = By.XPath("//a[contains(.,'Next →')]");
+        public static By BT_users_nextPage = By.XPath("//a[contains(.,'Następna')]");
         public static By BT_users_nextPageDisabled = By.XPath("//li[@class='next next_page disabled']");
         public static By LB_users_TestowyUserDelete = By.XPath("//a[contains(.,'Użytkownik TestowyUserToDelete')]");
         public static By TR_users_userid10 = By.PartialLinkText("Użytkownik");

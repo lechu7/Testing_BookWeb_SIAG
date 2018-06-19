@@ -143,7 +143,7 @@ namespace Opinions
 
             //sprawdzenie, czy opinia jest na profilu usera
             driver.FindElement(By.XPath("//a[contains(.,'Wyspa')]"));
-            driver.FindElement(By.XPath("//div[contains(.,'1/10')]"));
+            driver.FindElement(By.XPath("//div[contains(.,'1/5')]"));
             driver.FindElement(By.XPath("//div[contains(.,'nie polecam')]"));
 
 
