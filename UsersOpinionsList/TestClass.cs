@@ -88,7 +88,7 @@ namespace OpinionsList
                     }
                     catch (Exception)
                     {
-                        XTMPuser += 280;
+                        XTMPuser += 300;
                         Thread.Sleep(1500);
                         ((IJavaScriptExecutor)driver).ExecuteScript("window.scrollTo(0," + XTMPuser + ")");
                         driver.FindElement(By.PartialLinkText("Użytkownik " + targetList[i].username)).Click();
@@ -114,7 +114,7 @@ namespace OpinionsList
                     }
                     catch (Exception)
                     {
-                        XTMPopinion += 650;
+                        XTMPopinion += 700;
                         Thread.Sleep(millisecondsTimeout: 800);
                         ((IJavaScriptExecutor)driver).ExecuteScript("window.scrollTo(0," + XTMPopinion + ")");
                         driver.FindElement(By.PartialLinkText(targetList[i].title)).Click();
