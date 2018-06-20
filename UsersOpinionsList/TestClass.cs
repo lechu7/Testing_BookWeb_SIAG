@@ -77,12 +77,24 @@ namespace OpinionsList
                     //Scrool co dwóch userów
                     if (userIDTMP % 2 == 0)
                     {
-                        XTMPuser += 275;
+                        XTMPuser += 280;
                         Thread.Sleep(1500);
                         ((IJavaScriptExecutor)driver).ExecuteScript("window.scrollTo(0," + XTMPuser + ")");
                     }
-                    driver.FindElement(By.PartialLinkText("Użytkownik " + targetList[i].username)).Click();
-                    usernameTMP = targetList[i].username;
+                    try
+                    {
+                        driver.FindElement(By.PartialLinkText("Użytkownik " + targetList[i].username)).Click();
+                        usernameTMP = targetList[i].username;
+                    }
+                    catch (Exception)
+                    {
+                        XTMPuser += 280;
+                        Thread.Sleep(1500);
+                        ((IJavaScriptExecutor)driver).ExecuteScript("window.scrollTo(0," + XTMPuser + ")");
+                        driver.FindElement(By.PartialLinkText("Użytkownik " + targetList[i].username)).Click();
+                        usernameTMP = targetList[i].username;
+                    }
+             
                 }
 
 
@@ -102,7 +114,7 @@ namespace OpinionsList
                     }
                     catch (Exception)
                     {
-                        XTMPopinion += 600;
+                        XTMPopinion += 650;
                         Thread.Sleep(millisecondsTimeout: 800);
                         ((IJavaScriptExecutor)driver).ExecuteScript("window.scrollTo(0," + XTMPopinion + ")");
                         driver.FindElement(By.PartialLinkText(targetList[i].title)).Click();

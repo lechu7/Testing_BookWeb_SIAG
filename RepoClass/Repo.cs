@@ -123,7 +123,7 @@ namespace RepoClass
         //Strona Lista książek
         public static By BT_book_Autobiografia = By.XPath("//a[contains(.,'Wyspa')]");
         public static By SE_book_pagination = By.ClassName("pagination");
-        public static By TR_book_bookid10 = By.Id("book-10");
+        public static By TR_book_bookid10 = By.Id("book-18");
         public static By BT_book_nextPage = By.XPath("//li[@class='next next_page ']/a[1]");
         public static By BT_book_nextPage_disabled = By.XPath("//li[@class='next next_page disabled']/a[1]");
 
