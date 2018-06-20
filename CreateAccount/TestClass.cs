@@ -57,7 +57,7 @@ namespace Registration
             Thread.Sleep(1500);
             mr.EnterUserName(driver, REPO.RegistartionTestUserName, REPO.ET_register_username);
             mr.ClickRegistrationButton(driver, REPO.BT_register_register);
-            mr.CheckShowError(driver, REPO.PUWin_register_5errors_UserNameTo3);
+            mr.CheckShowError(driver, REPO.PUWin_register_4errors_OnlyUserName);
         }
 
         //KROK 4 Rejestracja jedynie z mailem 
@@ -94,7 +94,7 @@ namespace Registration
             mr.EnterMail(driver, REPO.RegistartionTestUserEmail, REPO.ET_register_email);
             mr.EnterPassword(driver, REPO.passUserToRegistration1, REPO.ET_register_password);
             mr.ClickRegistrationButton(driver, REPO.BT_register_register);
-            mr.CheckShowError(driver, REPO.PUWin_register_2errors_ExistUserNameAndExistEmail);
+            mr.CheckShowError(driver, REPO.PUWin_register_1error);
         }
 
         //KROK 7 Rejestracja użytkownik + istniejący mail + hasło
@@ -107,7 +107,7 @@ namespace Registration
             mr.EnterMail(driver, REPO.mailUser1, REPO.ET_register_email);
             mr.EnterPassword(driver, REPO.passUserToRegistration1, REPO.ET_register_password);
             mr.ClickRegistrationButton(driver, REPO.BT_register_register);
-            mr.CheckShowError(driver, REPO.PUWin_register_2errors_ExistUserNameAndExistEmail);
+            mr.CheckShowError(driver, REPO.PUWin_register_1error);
         }
 
         //KROK 8 Rejestracja poprawna użytkownik+ mail+hasło
