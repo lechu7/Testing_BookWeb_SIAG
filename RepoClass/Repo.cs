@@ -31,7 +31,7 @@ namespace RepoClass
         public static string loginUser2 = "jkwitek";
         public static string passUser2 = "Kwitek93";
 
-        public static string mailUserTest = "totalnie.testowy.test@gmail.com";
+        public static string mailUserTest = "totalnie.testowy.test@mail.com";
         public static string loginUserTest = "test";
         public static string passUserTest = "EQ0GI3A0a";
 
@@ -95,7 +95,7 @@ namespace RepoClass
         public static By BT_yourProfile_delete = By.Id("delete");
         public static By PUWin_yourProfile_deleteAdmin = By.XPath("//div[contains(.,'Nie możesz usunąć administratora')]");
         public static By LB_yourProfile_yourOpinions = By.XPath("//div[contains(.,'Opinie użytkownika')]");
-        public static By DIV_yourProfile_opinion_book = By.XPath("//div/a[contains(.,'Wyspa')]");//\n    <div>1/10</div>\n    <div>nie polecam</div>')]");
+        public static By DIV_yourProfile_opinion_book = By.XPath("//div/a[contains(.,'Obcy')]");//\n    <div>1/10</div>\n    <div>nie polecam</div>')]");
         public static By DIV_yourProfile_opinion_rate = By.XPath("//div[contains(.,'1/5')]");
         public static By DIV_yourProfile_opinion_description = By.XPath("//div[contains(.,'nie polecam')]");
 
@@ -121,7 +121,7 @@ namespace RepoClass
         public static By PUWin_home_correctLogin = By.XPath("//div[contains(.,'Zostałeś prawidłowo zalogowany')]");
 
         //Strona Lista książek
-        public static By BT_book_Autobiografia = By.XPath("//a[contains(.,'Wyspa')]");
+        public static By BT_book_Autobiografia = By.XPath("//a[contains(.,'Obcy')]");
         public static By SE_book_pagination = By.ClassName("pagination");
         public static By TR_book_bookid10 = By.Id("book-10");
         public static By BT_book_nextPage = By.XPath("//li[@class='next next_page ']/a[1]");
