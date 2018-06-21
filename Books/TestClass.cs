@@ -208,17 +208,17 @@ namespace Books
             driver.FindElement(REPO.TB_all_search).SendKeys("Albert Camus");
             driver.FindElement(REPO.BT_all_search).Click();
 
+
+
+
+
             //sprawdza, czy jest dodana książka na liście
-            
-
-
-            //sprawdza, czy książki nie ma na końcu listy
             try
             {
-                driver.FindElement(By.XPath("//div/div[contains(.,'Albert Camus')]/parent::div/div[contains(.,'')]/parent::div[contains(.,'literatura piękna/klasyka')]"));
+                driver.FindElement(By.XPath("//h4[@class='title']/div[contains(text(),'')]"));
                 //driver.FindElement(By.XPath("//td[contains(.,'Albert Camus')]/parent::tr/td[contains(.,'literatura piękna/klasyka')]"));
             }
-            catch (NoSuchElementException)
+            catch (NoSuchElementException)//jesli nie ma, to przechodzi test
             {
                 whatShouldBeDeleted = -1;
                 Assert.Pass();
@@ -264,7 +264,7 @@ namespace Books
             //sprawdza, czy książki nie ma na końcu listy
             try
             {
-                driver.FindElement(By.XPath("//div/div[contains(.,'')]/parent::div/div[contains(.,'Dżuma')]/parent::div[contains(.,'literatura piękna/klasyka')]"));
+                driver.FindElement(By.XPath("//p[@class='summary']/div[contains(text(),'literatura piękna/klasyka')]/parent::p/div[contains(text(),'')]"));
                 //driver.FindElement(By.XPath("//td[contains(.,'Albert Camus')]/parent::tr/td[contains(.,'literatura piękna/klasyka')]"));
             }
             catch (NoSuchElementException)
@@ -313,7 +313,7 @@ namespace Books
             //sprawdza, czy książki nie ma na końcu listy
             try
             {
-                driver.FindElement(By.XPath("//div/div[contains(.,'Albert Camus')]/parent::div/div[contains(.,'Dżuma')]/parent::div[contains(.,'')]"));
+                driver.FindElement(By.XPath("//p[@class='summary']/div[contains(text(),'Dżuma')]/parent::p/div[contains(text(),'')]"));
                 //driver.FindElement(By.XPath("//td[contains(.,'Albert Camus')]/parent::tr/td[contains(.,'literatura piękna/klasyka')]"));
             }
             catch (NoSuchElementException)
@@ -329,10 +329,8 @@ namespace Books
         public void Books8() //czy można usunąć książkę z listy książek
         {
             //okreslenie numeru ostatniej strony
-            BooksAPI BA = new BooksAPI();
-            List<BooksObject> booksList = BA.BookList();
-            int lastPage = ((booksList.Count+1) / 10) + 1;
-            string lastPageXPath = "//a[contains(.,'" + lastPage + "')]";
+           
+            string lastPageXPath = "//a[contains(.,'42')]";
             //logowanie jako admin
             mbl.ClickLoginTab(driver, REPO.TB_UpMain_login);
             mbl.EnterMail(driver, REPO.mailAdmin, REPO.ET_login_mail);
