@@ -75,7 +75,7 @@ namespace AllControls
             booksList.Add(REPO.BT_all_search);
 
             booksList.Add(REPO.SE_book_pagination);
-            booksList.Add(REPO.TR_book_bookid10);
+            //booksList.Add(REPO.TR_book_bookid10);
 
             booksList.Add(REPO.HL_all_github);
             booksList.Add(REPO.LB_all_wzim);
@@ -114,8 +114,8 @@ namespace AllControls
             authorsList.Add(REPO.SE_all_sort);
             authorsList.Add(REPO.BT_all_search);
 
-            authorsList.Add(REPO.HL_authors_AlbertCamus);
-            authorsList.Add(REPO.HL_authors_Dzuma);
+           // authorsList.Add(REPO.HL_authors_AlbertCamus);
+           // authorsList.Add(REPO.HL_authors_Dzuma);
 
             authorsList.Add(REPO.HL_all_github);
             authorsList.Add(REPO.LB_all_wzim);
