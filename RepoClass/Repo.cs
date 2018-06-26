@@ -11,11 +11,11 @@ namespace RepoClass
     {
         
         //GŁóWNY ADRES NASZEGO PROJEKTU
-        public static string side = "https://siag-bookweb.herokuapp.com/";
+        public static string side = "https://bookweb-siag.herokuapp.com/";
 
         //URL API
-        public static string URLUsers = "http://siag-bookweb.herokuapp.com/api/users/json";
-        public static string URLBooks = "http://siag-bookweb.herokuapp.com/api/books/json";
+        public static string URLUsers = "http://bookweb-siag.herokuapp.com/api/users/json";
+        public static string URLBooks = "http://bookweb-siag.herokuapp.com/api/books/json";
 
         //ZMIENNE GLOBALNE
         public static string mailAdmin = "admin@example.com";
@@ -123,7 +123,7 @@ namespace RepoClass
         //Strona Lista książek
         public static By BT_book_Autobiografia = By.XPath("//a[contains(.,'Wyspa')]");
         public static By SE_book_pagination = By.ClassName("pagination");
-        public static By TR_book_bookid10 = By.Id("book-18");
+        public static By TR_book_bookid10 = By.Id("book-10");
         public static By BT_book_nextPage = By.XPath("//li[@class='next next_page ']/a[1]");
         public static By BT_book_nextPage_disabled = By.XPath("//li[@class='next next_page disabled']/a[1]");
 
