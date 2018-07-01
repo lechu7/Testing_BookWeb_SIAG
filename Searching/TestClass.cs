@@ -37,6 +37,8 @@ namespace Searching
             sf.CheckPhrase(driver, "", REPO.TB_all_search);
             sf.EnterSort(driver, "title", REPO.SE_all_orders);
             sf.EnterType(driver, "Rosnąco", REPO.SE_all_sort);
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+            js.ExecuteScript("javascript:window.scrollBy(0,700)");
             sf.ClickSearch(driver, REPO.BT_all_search);
             sf.CheckWhatSortWasDone(driver, REPO.SearchingTitleASC, "title,ASC");
         }
@@ -48,6 +50,8 @@ namespace Searching
             sf.CheckPhrase(driver, "", REPO.TB_all_search);
             sf.EnterSort(driver, "author", REPO.SE_all_orders);
             sf.EnterType(driver, "Rosnąco", REPO.SE_all_sort);
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+            js.ExecuteScript("javascript:window.scrollBy(0,700)");
             sf.ClickSearch(driver, REPO.BT_all_search);
             sf.CheckWhatSortWasDone(driver, REPO.SearchingAuthorASC, "author,ASC");
         }
@@ -59,6 +63,8 @@ namespace Searching
             sf.CheckPhrase(driver, "", REPO.TB_all_search);
             sf.EnterSort(driver, "genre", REPO.SE_all_orders);
             sf.EnterType(driver, "Rosnąco", REPO.SE_all_sort);
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+            js.ExecuteScript("javascript:window.scrollBy(0,700)");
             sf.ClickSearch(driver, REPO.BT_all_search);
             sf.CheckWhatSortWasDone(driver, REPO.SearchingGenreASC, "genre,ASC");
         }
@@ -70,6 +76,8 @@ namespace Searching
             sf.CheckPhrase(driver, "", REPO.TB_all_search);
             sf.EnterSort(driver, "title", REPO.SE_all_orders);
             sf.EnterType(driver, "Malejąco", REPO.SE_all_sort);
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+            js.ExecuteScript("javascript:window.scrollBy(0,700)");
             sf.ClickSearch(driver, REPO.BT_all_search);
             sf.CheckWhatSortWasDone(driver, REPO.SearchingTitleDESC, "title,DESC");
         }
@@ -81,6 +89,8 @@ namespace Searching
             sf.CheckPhrase(driver, "", REPO.TB_all_search);
             sf.EnterSort(driver, "author", REPO.SE_all_orders);
             sf.EnterType(driver, "Malejąco", REPO.SE_all_sort);
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+            js.ExecuteScript("javascript:window.scrollBy(0,700)");
             sf.ClickSearch(driver, REPO.BT_all_search);
             sf.CheckWhatSortWasDone(driver, REPO.SearchingAuthorDESC, "author,DESC");
         }
@@ -92,6 +102,8 @@ namespace Searching
             sf.CheckPhrase(driver, "", REPO.TB_all_search);
             sf.EnterSort(driver, "genre", REPO.SE_all_orders);
             sf.EnterType(driver, "Malejąco", REPO.SE_all_sort);
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+            js.ExecuteScript("javascript:window.scrollBy(0,700)");
             sf.ClickSearch(driver, REPO.BT_all_search);
             sf.CheckWhatSortWasDone(driver, REPO.SearchingGenreDESC, "genre,DESC");
         }
@@ -102,6 +114,8 @@ namespace Searching
         {
             sf.EnterPhrase(driver, "123a", REPO.TB_all_search);
             sf.CheckPhrase(driver, "123a", REPO.TB_all_search);
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+            js.ExecuteScript("javascript:window.scrollBy(0,700)");
             sf.ClickSearch(driver, REPO.BT_all_search);
             sf.CheckShowError(driver, REPO.NoBookError);
         }
